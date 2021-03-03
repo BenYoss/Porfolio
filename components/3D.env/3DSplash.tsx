@@ -2,14 +2,25 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-use-before-define */
 import * as React from 'react';
+import { Canvas } from 'react-three-fiber';
+import DodeUI from './models/Dodecahedron';
+// import Controls from './Controls';
 
 type Props = {
 };
 
-const AboutMe: React.FC<Props> = () => (
-        <div>
-            <h2>This will be the About me page</h2>
-        </div>
+const Splash3D: React.FC<Props> = () => (
+    <Canvas>
+        <React.Suspense fallback={
+            <mesh>
+            <sphereBufferGeometry attach="geometry" args={[0.7, 30, 30]} />
+            <meshBasicMaterial attach="material" color={0xfff1ef} />
+        </mesh>}>
+        </React.Suspense>
+        <ambientLight />
+        <pointLight position={[10, 0, 10]} intensity={2} />
+        <DodeUI />
+    </Canvas>
 );
 
-export default AboutMe;
+export default Splash3D;
