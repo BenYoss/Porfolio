@@ -11,7 +11,7 @@ type Props = {
 };
 
 const Splash3D: React.FC<Props> = () => {
-  const [hovered, setHovered] = React.useState([false, false, false, false]);
+  const [hovered, setHovered] = React.useState([false, false, false, false, false]);
   const [clicked, setClicked] = React.useState([false, false, false, false]);
   const color = ['#F0FFFF', '#00CED1', '#9400D3', '#FF8C00'];
 
@@ -25,7 +25,7 @@ const Splash3D: React.FC<Props> = () => {
         </React.Suspense>
         <ambientLight />
         <pointLight position={[10, 0, 10]} intensity={2} />
-        <DodeUI />
+        <DodeUI clicked={clicked} colors={color} hovered={hovered} setHovered={setHovered} />
         <TextMesh position={[6, 1, 0]} index={0} />
         <TetraUI
         position={[3, 0, 0]}
