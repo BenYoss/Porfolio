@@ -1,11 +1,24 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useFrame } from 'react-three-fiber';
 import * as THREE from 'three';
 
 let x: number = 0.01;
-const DodeUI: Function = ({ colors, clicked, hovered, setHovered }) => {
+const DodeUI: Function = ({
+  colors, clicked, hovered, setHovered,
+}) => {
   const [color, setColor] = useState('#1B1B1B');
+  const [recordedClick, setRecordedClick] = useState(0);
+  const [, setReload] = useState([]);
+
   const mesh = useRef<THREE.Object3D>();
+
+  useEffect(() => {
+    if (x > 3) {
+      setTimeout(() => {
+        window.location.href = '/about';
+      }, 2700);
+    }
+  }, [x]);
 
   useFrame(({ mouse }) => {
     mesh.current.rotation.x = mouse.x * 0.2;
@@ -15,6 +28,19 @@ const DodeUI: Function = ({ colors, clicked, hovered, setHovered }) => {
       colors.forEach((type, i) => {
         if (clicked[i]) {
           setColor(type);
+        }
+      });
+      clicked.forEach((click) => {
+        if (!click[recordedClick]) {
+          mesh.current.scale.set(x, x, x);
+          if (x > 3) {
+            x += 0.002;
+          } else {
+            x += 0.04;
+          }
+          setTimeout(() => {
+            setReload([]);
+          }, 2000);
         }
       });
     } else {
@@ -28,11 +54,12 @@ const DodeUI: Function = ({ colors, clicked, hovered, setHovered }) => {
 
   return (
         <mesh ref={mesh} rotation={[-Math.PI / 2, 0, 0]} onPointerOver={() => {
-          clicked.forEach((click) => {
+          clicked.forEach((click, i) => {
             if (click) {
               const hoveredList = [...hovered];
               hoveredList[4] = true;
               setHovered(hoveredList);
+              setRecordedClick(i);
             }
           });
         }}
