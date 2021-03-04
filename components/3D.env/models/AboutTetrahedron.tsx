@@ -2,12 +2,11 @@ import { useRef } from 'react';
 import { useFrame } from 'react-three-fiber';
 import * as THREE from 'three';
 
-// const color = '#00CED1';
 let rendered = false;
 let x: number = 0.01;
 
 const TetraUI: Function = ({
-  position, hovered, setHovered, color, index,
+  position, clicked, hovered, setHovered, color, index, setClicked,
 }) => {
   const mesh = useRef<THREE.Object3D>();
 
@@ -27,19 +26,17 @@ const TetraUI: Function = ({
     } else if (!hovered[index] && x > 0.8) {
       x = 0.8;
     }
-    // if (!click && position[0] > -(position[0] / 2)) {
-    //   mesh.current.position.x += 0.005;
-    //   mesh.current.position.y += 0.1;
-    //   mesh.current.position.z -= 0.002;
-    // }
-    if (rendered) {
+    if (clicked[index]) {
+      mesh.current.position.x = mouse.x * 8;
+      mesh.current.position.y = mouse.y * 4;
+    }
+    if (rendered && !clicked[index]) {
       if (index > 1) {
         mesh.current.position.x = position[0] + mouse.x * 0.4;
         mesh.current.position.y = position[2] + mouse.y * 0.2;
-        mesh.current.position.z = position[2] + mouse.x * 0.008;
+        mesh.current.position.z = position[2] + mouse.x * 0.01;
       } else {
         mesh.current.position.x = position[0] + mouse.x * 0.2;
-        mesh.current.position.y = position[2] + mouse.y * 0.1;
         mesh.current.position.z = position[2] + mouse.x * 0.004;
       }
     }
@@ -62,8 +59,13 @@ const TetraUI: Function = ({
            const hoverList = [...hovered];
            hoverList[index] = false;
            setHovered([...hoverList]);
+         }}
+         onClick={() => {
+           const clickList = [...clicked];
+           clickList[index] = !clickList[index];
+           setClicked([...clickList]);
          }}>
-            <tetrahedronBufferGeometry attach="geometry" args={[1, 1]} />
+            <octahedronBufferGeometry attach="geometry" args={[1, 1]} />
             <meshPhongMaterial attach="material" color={color} flatShading shininess={4} />
         </mesh>
   );
