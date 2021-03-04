@@ -4,9 +4,9 @@ import * as THREE from 'three';
 
 const color = '#1B1B1B';
 
+let x: number = 0.01;
 const DodeUI: Function = () => {
   const mesh = useRef<THREE.Object3D>();
-  let x: number = 0.01;
   useFrame(({ mouse }) => {
     mesh.current.rotation.x = mouse.x * 0.2;
     mesh.current.rotation.z = mouse.y * 0.1;

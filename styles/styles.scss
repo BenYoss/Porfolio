@@ -2,7 +2,7 @@ $color: #2a2c41;
 
 // title related content for the splash header
 $titleColor: white;
-$titleSize: 3vw;
+$titleSize: 4vw;
 
 h3 {
   color: $color;
@@ -15,7 +15,7 @@ h3 {
 }
 
 .last-name {
-  margin-left: 5%;
+  margin-left: 0%;
 }
 
 .three-env {
@@ -25,7 +25,7 @@ h3 {
 }
 
 .container-header {
-  padding: 0px 50px 10px 10px;
+  padding: 0px 20px 10px 10px;
   display: flex;
   position: absolute;
   width: 100%;
