@@ -16,6 +16,7 @@ const DodeUI: Function = () => {
       x += 0.05;
     }
   });
+
   return (
         <mesh ref={mesh} rotation={[-Math.PI / 2, 0, 0]}>
             <dodecahedronBufferGeometry attach="geometry" args={[1, 1]} />
