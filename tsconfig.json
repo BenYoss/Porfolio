@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/_app.js", "components/3D.env/Controls.jsx", "components/3D.env/CSS3DSplash.tsx"  ],
+, "pages/_app.js", "components/3D.env/Controls.jsx", "components/3D.env/CSS3DSplash.tsx", "components/3D.env/models/MeshText.jsx"  ],
   "exclude": [
     "node_modules"
   ]
