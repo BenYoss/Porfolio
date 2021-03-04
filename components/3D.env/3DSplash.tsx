@@ -25,7 +25,8 @@ const Splash3D: React.FC<Props> = () => {
         </React.Suspense>
         <ambientLight />
         <pointLight position={[10, 0, 10]} intensity={2} />
-        <DodeUI clicked={clicked} colors={color} hovered={hovered} setHovered={setHovered} />
+        <DodeUI clicked={clicked} colors={color} hovered={hovered} setHovered={setHovered}
+        setClicked={setClicked} />
         <TextMesh position={[6, 1, 0]} index={0} />
         <TetraUI
         position={[3, 0, 0]}

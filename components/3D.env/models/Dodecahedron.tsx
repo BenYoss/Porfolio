@@ -4,7 +4,7 @@ import * as THREE from 'three';
 
 let x: number = 0.01;
 const DodeUI: Function = ({
-  colors, clicked, hovered, setHovered,
+  colors, clicked, hovered, setHovered, setClicked,
 }) => {
   const [color, setColor] = useState('#1B1B1B');
   const [recordedClick, setRecordedClick] = useState(0);
@@ -33,10 +33,12 @@ const DodeUI: Function = ({
       clicked.forEach((click) => {
         if (!click[recordedClick]) {
           mesh.current.scale.set(x, x, x);
-          if (x > 3) {
-            x += 0.002;
-          } else {
-            x += 0.04;
+          if (x < 4.9) {
+            if (x > 3) {
+              x += 0.002;
+            } else {
+              x += 0.04;
+            }
           }
           setTimeout(() => {
             setReload([]);
@@ -59,6 +61,11 @@ const DodeUI: Function = ({
               const hoveredList = [...hovered];
               hoveredList[4] = true;
               setHovered(hoveredList);
+              const clickList = [...clicked];
+              clickList[i] = false;
+              setTimeout(() => {
+                setClicked([...clickList]);
+              }, 100);
               setRecordedClick(i);
             }
           });
