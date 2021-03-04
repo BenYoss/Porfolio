@@ -38,6 +38,7 @@
     "react-three-fiber": "^5.3.10",
     "three": "^0.126.0",
     "three-orbit-controls": "^82.1.0",
+    "troika-three-text": "^0.40.0",
     "typescript": "^4.2.2"
   },
   "devDependencies": {
