@@ -1,18 +1,31 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
-import Link from 'next/link';
-import About from '../components/App';
+import { useState, useEffect } from 'react';
+import Splash3D from '../components/3D.env/3DSplash';
 
-const Test2 = () => (
-    <div>
-        <h3>Hello Next with typescript!</h3>
-        <Link href="/about">
-            <a title="Click me!!">
-                Click me!!
-            </a>
-        </Link>
-        <About />
+const Index = () => {
+  const [threeEnv, setThreeEnv] = useState();
+
+  useEffect(() => {
+    setTimeout(() => {
+      setThreeEnv(<div className="three-env">
+                <Splash3D className="canvo" />
+            </div>);
+    }, 1400);
+  }, []);
+
+  return (
+    <div className="splash-container">
+        <div className="container-header">
+            <h3 className="header-title"><span>B E N J A M I N</span><span className="last-name">Y O S S</span></h3>
+        </div>
+        <div className="header-divider">
+        </div>
+        <div className="container-body">
+          {threeEnv}
+        </div>
     </div>
-);
+  );
+};
 
-export default Test2;
+export default Index;
