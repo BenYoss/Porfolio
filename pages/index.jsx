@@ -18,17 +18,17 @@ const Index = () => {
                 <Splash3D className="canvo" />
             </div>);
     }, 1400);
-    setTimeout(() => {
-      setWindowEnv(<div className="three-env">
-                <CSSSplash3D type="module" className="canvo" positions={positionList} clickList={clickList} colors={colorList} />
-            </div>);
-    }, 2300);
+    // setTimeout(() => {
+    //   setWindowEnv(<div className="three-env">
+    //             <CSSSplash3D type="module" className="canvo" positions={positionList} clickList={clickList} colors={colorList} />
+    //         </div>);
+    // }, 2300);
   }, []);
 
   return (
     <div className="splash-container">
         <div className="container-header">
-            <h3 className="header-title">{'W E L C O M E'}</h3>
+            <h3 className="header-title"><span>B E N J A M I N</span><span className="last-name">Y O S S</span></h3>
         </div>
         <div className="header-divider">
         </div>
