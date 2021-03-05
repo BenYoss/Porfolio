@@ -16,8 +16,9 @@ const Index = () => {
 
   return (
     <div className="splash-container">
+      <a href="/about">click me</a>
         <div className="container-header">
-            <h3 className="header-title"><span>B E N J A M I N</span><span className="last-name">Y O S S</span></h3>
+            <h3 className="header-title"><span>BENJAMIN </span><span className="last-name"> YOSS</span></h3>
         </div>
         <div className="header-divider">
         </div>

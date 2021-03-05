@@ -65,7 +65,7 @@ const TetraUI: Function = ({
            clickList[index] = !clickList[index];
            setClicked([...clickList]);
          }}>
-            <octahedronBufferGeometry attach="geometry" args={[1, 1]} />
+            <tetrahedronBufferGeometry attach="geometry" args={[1, 1]} />
             <meshPhongMaterial attach="material" color={color} flatShading shininess={4} />
         </mesh>
   );

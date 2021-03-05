@@ -15,7 +15,7 @@ const DodeUI: Function = ({
   useEffect(() => {
     if (x > 3) {
       setTimeout(() => {
-        window.location.href = '/about';
+        window.open('/about');
       }, 2700);
     }
   }, [x]);
