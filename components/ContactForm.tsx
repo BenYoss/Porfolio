@@ -9,7 +9,7 @@ type Props = {
     form: (e: React.FormEvent, formData: IPost) => void,
 };
 
-const Navbar: React.FC<Props> = ({ form }) => {
+const Navba: React.FC<Props> = ({ form }) => {
   const [data, setData] = React.useState([]);
 
   return (
@@ -19,4 +19,4 @@ const Navbar: React.FC<Props> = ({ form }) => {
   );
 };
 
-export default Navbar;
+export default Navba;

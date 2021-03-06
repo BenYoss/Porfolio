@@ -8,12 +8,23 @@ $backgroundShade: "#F0FFFF", "#00CED1", "#9400D3", "#FF8C00";
 h3 {
   color: $color;
 }
+
+.navbar-container {
+  width: 100%;
+  :hover {
+    // background-color: white;
+  }
+}
+
+
 .about-me-header {
   font-size: $titleSize;
   position: absolute;
-  top: 30%;
+  background: white;
+  top: 15%;
   left: 20%;
   color: #f7b93e;
+  animation: about-header-tween ease-in-out 3s;
 }
 
 .nav-bar-about {
@@ -25,7 +36,16 @@ h3 {
   // border-top: 5px solid #bbb;
   // border-bottom: 5px solid #bbb;
   // border-radius: 5px;
-  box-shadow: 2px 2px 2px 2px black;
+  // box-shadow: 2px 2px 2px 2px black;
+}
+
+.navbar-cluster {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.navbar-home :hover {
+  color: yellow;
 }
 
 .about-me-image {
@@ -52,9 +72,12 @@ h3 {
 }
 
 .about-description {
-  margin-left: 2vw;
-  max-width: 50vw;
-  // flex-wrap: wrap;
+  position: absolute;
+  font-size: large;
+  margin-left: 16vw;
+  max-width: 48vw;
+  top: 50%;
+  animation: about-description-tween ease-out 4s;
 }
 
 .about-body {
@@ -101,6 +124,44 @@ html {
   background: radial-gradient(#404040 4%, #000000 96%);
 }
 
+.arrow {
+	position: absolute;
+	top: 4%;
+  right: 4%;
+	width: 3vmin;
+	height: 3vmin;
+	background: transparent;
+	border-top: 1vmin solid white;
+	border-right: 1vmin solid white;
+	box-shadow: 0 0 0 lightgray;
+	transition: all 200ms ease;
+	
+	&.left {
+		left: 3%;
+		transform: translate3d(0,-50%,0) rotate(-135deg);
+	}
+
+	&.right {
+		right: 3%;
+		transform: translate3d(0,-50%,0) rotate(45deg);
+	}
+	
+	&:hover {
+		border-color: orange;
+		box-shadow: 0.5vmin -0.5vmin 0 white;
+	}
+	
+	&:before { // for better hit area
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-40%,-60%) rotate(45deg);
+		width: 200%;
+		height: 200%;
+	}
+}
+
 .header-title {
   color: $titleColor;
   font-size: $titleSize;
@@ -129,33 +190,87 @@ html {
 }
 
 @keyframes about-body-tween {
-  from { height: 0px; margin-top: 100% }
-  to { height: 35vw; margin-top: 2% }
+  from {
+    height: 0px;
+    margin-top: 100%;
+  }
+  to {
+    height: 35vw;
+    margin-top: 2%;
+  }
 }
 
 @keyframes about-image-tween {
-  0% { right: 0%; opacity: 0%; }
-  30% { right: 0%; opacity: 0%; }
-  100% { right: 5%; opacity: 100%; }
+  0% {
+    right: 0%;
+    opacity: 0%;
+  }
+  30% {
+    right: 0%;
+    opacity: 0%;
+  }
+  100% {
+    right: 5%;
+    opacity: 100%;
+  }
 }
 
 @keyframes about-layer-tween {
-  0% { height: 40vw; top: 30%; }
-  60% { height: 40vw; top: 30%; }
-  100% { height: 0vw; top: 100%; }
+  0% {
+    height: 40vw;
+    top: 30%;
+  }
+  60% {
+    height: 40vw;
+    top: 30%;
+  }
+  100% {
+    height: 0vw;
+    top: 100%;
+  }
 }
 
 @keyframes about-header-tween {
   0% {
-    left: 0%;
-    opacity: 0%;
+    background: #f7b93e;
+    top: 30%;
   }
-  50% {
-    left: 0%;
-    opacity: 0%;
+  18% {
+    background: #f7b93e;
+    top: 30%;
+  }
+  21% {
+    background: white;
+    top: 30%;
+  }
+  80% {
+    background: white;
+    top: 30%;
   }
   100% {
-    left: 20%;
+    background: white;
+    top: 15%;
+  }
+}
+
+@keyframes about-description-tween {
+  0% {
+    top: 30%;
+    opacity: 0%
+  }
+  60% {
+    // background: white;
+    top: 30%;
+    opacity: 0%;
+  }
+  80% {
+    // background: white;
+    top: 50%;
+    opacity: 0%;
+  }
+  90% {
+    // background: white;
+    top: 50%;
     opacity: 100%;
   }
 }

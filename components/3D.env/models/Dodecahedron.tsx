@@ -4,21 +4,23 @@ import * as THREE from 'three';
 
 let x: number = 0.01;
 const DodeUI: Function = ({
-  colors, clicked, hovered, setHovered, setClicked,
+  colors, clicked, hovered, setHovered, setClicked, router,
 }) => {
   const [color, setColor] = useState('#1B1B1B');
   const [recordedClick, setRecordedClick] = useState(0);
   const [, setReload] = useState([]);
+  const urls = ['/experience', '/contact', '/projects', '/about'];
 
   const mesh = useRef<THREE.Object3D>();
-
   useEffect(() => {
     if (x > 3) {
       setTimeout(() => {
-        window.open('/about');
+        // console.log(recordedClick)
+        router.push(urls[recordedClick]);
+        x = 1.0;
       }, 2700);
     }
-  }, [x]);
+  }, [x, router]);
 
   useFrame(({ mouse }) => {
     mesh.current.rotation.x = mouse.x * 0.2;
@@ -67,6 +69,7 @@ const DodeUI: Function = ({
                 setClicked([...clickList]);
               }, 100);
               setRecordedClick(i);
+              console.log(recordedClick);
             }
           });
         }}

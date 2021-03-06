@@ -1,6 +1,9 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 // import Footer from '../components/Footer';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import Navbar from '../components/Navbar';
+// import Image from 'next/image';
 // import img from '../components/resources/image0.jpg';
 
 export default function About() {
@@ -9,12 +12,12 @@ export default function About() {
   useEffect(() => {
     document.getElementsByTagName('html')[0].style.background = '#f7b93e';
     setReload([]);
-    console.log(document.getElementsByTagName('html')[0].style.background);
   }, []);
 
   return (
       <div className="about-container">
         <div className="nav-bar-about">
+          <Navbar />
         </div>
         <div className="about-me-header">
           <h2>Hey! I'm Ben!</h2>
@@ -25,20 +28,11 @@ export default function About() {
           <div className="about-me-layer">
           </div>
           <div className="about-description">
-            {/* <h4>
-              <span>
-              random random random random random
-              random random random random random
-              randomrandomrandomrandomrandom
-              randomrandomrandomrandomrandom
-              randomrandomrandomrandomrandom
-              randomrandomrandomrandomrandom
-              randomrandomrandomrandomrandom
-              randomrandomrandomrandomrandom
-              randomrandomrandomrandomrandom
-              randomrandomrandomrandomrandom
-              </span>
-            </h4> */}
+            <span>
+                I'm a software developer/designer based in New Orleans.
+                Tech has always been a passion of mine since highschool
+                and I enjoy <b>bringing ideas to life!</b>
+            </span>
           </div>
           {/* <Footer /> */}
         </div>
