@@ -7,11 +7,7 @@ import DodeUI from './models/Dodecahedron';
 import TetraUI from './models/AboutTetrahedron';
 import TextMesh from './models/MeshText';
 
-type Props = {
-  router: () => {}
-};
-
-const Splash3D: React.FC<Props> = ({ router }) => {
+const Splash3D = ({ router }) => {
   const [hovered, setHovered] = React.useState([false, false, false, false, false]);
   const [clicked, setClicked] = React.useState([false, false, false, false]);
   const color = ['#F0FFFF', '#00CED1', '#9400D3', '#FF8C00'];

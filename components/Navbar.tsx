@@ -5,13 +5,13 @@ import Link from 'next/link';
 type Props = {
 }
 
-const Navbar: React.FC<Props> = () => (
+const Navbar: React.FC<Props> = ({ type }) => (
         <div className="navbar-container">
             <div className="navbar-cluster">
               <a className="arrow left">
               </a>
               <Link href="/">
-                  <span className="navbar-home">
+                  <span className={type || 'navbar-home'}>
                       Back to Home
                   </span>
               </Link>

@@ -27,7 +27,26 @@ h3 {
   animation: about-header-tween ease-in-out 3s;
 }
 
+.projects-3D {
+  position: absolute;
+  right: 0;
+  height: 47vw;
+  width: 60vw;
+}
+
 .nav-bar-about {
+  font-size: $titleSize * 0.5;
+  display: flex;
+  justify-content: center;
+  // background-color: $color;
+  color: white;
+  // border-top: 5px solid #bbb;
+  // border-bottom: 5px solid #bbb;
+  // border-radius: 5px;
+  // box-shadow: 2px 2px 2px 2px black;
+}
+
+.nav-bar-experience {
   font-size: $titleSize * 0.5;
   display: flex;
   justify-content: center;
@@ -84,6 +103,13 @@ h3 {
   height: 35vw;
   margin-top: 2%;
   background: white;
+  animation: about-body-tween ease-out 1s;
+}
+
+.experience-body {
+  height: 35vw;
+  margin-top: 2%;
+  background: rgb(218, 100, 100);
   animation: about-body-tween ease-out 1s;
 }
 
