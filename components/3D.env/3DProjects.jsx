@@ -1,8 +1,10 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 import * as THREE from 'three';
-import React, {
+import {
   useState, useEffect, Suspense, useRef,
 } from 'react';
-import { Canvas, useFrame } from 'react-three-fiber';
+import { Canvas } from 'react-three-fiber';
 import ProjectMesh from './models/Projects';
 
 const position = [[0, -4, 0], [0, 0, 0], [0, 4, 0]];

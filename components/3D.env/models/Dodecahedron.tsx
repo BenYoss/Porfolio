@@ -9,7 +9,7 @@ const DodeUI: Function = ({
   const [color, setColor] = useState('#1B1B1B');
   const [recordedClick, setRecordedClick] = useState(0);
   const [, setReload] = useState([]);
-  const urls = ['/experience', '/contact', '/projects', '/about'];
+  const urls = ['/projects', '/contact', '/skills', '/about'];
 
   const mesh = useRef<THREE.Object3D>();
   useEffect(() => {

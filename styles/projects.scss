@@ -1,10 +1,182 @@
-.projects-layer {
+$experience-title-color: white;
+$container-background: white;
+
+.experience-grid {
     position: absolute;
-    top: 98%;
-    right: 5%;
-    border: 5px solid #f7b93e;
-    background: #f7b93e;
-    background-size: cover;
-    width: 30vw;
-    animation: about-layer-tween ease-out 2s;
+    bottom: 0;
+
+    &:hover {
+      bottom: 10%;  
+      animation: grid-hover-anim ease-out 0.5s;
+    }
 }
+
+.experience-container {
+}
+
+.experience-header {
+  font-size: 6vw;
+  background: black;
+  color: $experience-title-color;
+  &:hover {
+    // $container-background: blue;
+    color: $experience-title-color;
+  }
+}
+
+@keyframes grid-hover-anim {
+    from { bottom: 0% }
+    to { bottom: 10% }
+}
+
+*, *:after, *:before {
+    font-family:Arial;
+  }
+  
+  
+  .experience-gui {
+    padding:0;
+    margin:0;
+    position:absolute;
+    top:10%;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto;
+    list-style:none;
+    width:99vw;
+    height:28.2vw;
+    border-radius:3px;
+    overflow:hidden;
+    box-shadow:1px 1px 3px 1px;
+    animation: gui-tween ease-out 1s;
+  }
+  
+  
+  .experience-block {
+    position:relative;
+    width:15vw;
+    height:28.2vw;
+    float:left;
+    border-left:1px solid white;
+    -webkit-transition:all 0.7s;
+    -moz-transition:all 0.7s;
+    transition:all 0.7s;
+    box-shadow:-2px 0 10px 2px;
+  }
+  
+  .experience-gui .experience-block:first-child {
+    border:none;
+  }
+  
+  .experience-title {
+    display:block;
+    position:absolute;
+    bottom:0;
+    width:50%;
+    color:white;
+    white-space:nowrap;
+    padding:20px;
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+  
+  }
+  
+  .experience-img {
+    width:50vw;
+    height:28.2vw;
+    filter: brightness(60%);
+    &:hover {
+      filter: brightness(100%);
+      animation: bright ease-out 1s;
+    }
+    transition: brightness(60%) 1s linear;
+    -webkit-transition: brightness(60%) 1s linear;
+  }
+
+  @keyframes bright {
+    from { filter: brightness(60%); }
+    to { filter: brightness(100%); }
+  }
+
+  $colors: #ff6e3f, #2f4f4f, #343a40, #579dce;
+  
+  .experience-gui:hover .experience-block {
+    width:50px;  
+  }
+
+  .extended {
+    position: absolute;
+    bottom: 0;
+    left: 0vw;
+    height: 28.2vw;
+    word-break: break-word;
+    overflow:hidden;
+    color: white;
+    left:47vw;
+    font-size: x-small;
+    z-index: 3;
+    max-width: fit-content;
+  }
+  .navbar-projects {
+    font-size: 20 * 0.5;
+    position: relative;
+    left: 0;
+    color: black;
+  }
+
+  .extended-desc {
+    margin: 5%;
+    max-width: 60%;
+  }
+
+  .extend-span {
+    margin-bottom: 5%;
+    padding: 0%;
+    text-align: left;
+  }
+
+  .extended-tech {
+    margin: 5%;
+    max-width: 70%;
+  }
+
+  .extended-unit {
+    border-radius: 30px;
+    color: #fff;
+    background-color: black;
+    content: attr(badge);
+    font-size: 11px;
+    margin-top: -10px;
+    min-width: 20px;
+    padding: 2px;
+    margin: 2px;
+    position: relative;
+    text-align: center;
+    word-break: break-word;
+    filter: opacity(50%);
+  }
+
+  @keyframes gui-tween {
+    from { width: 0vw; right: 100vw; }
+    to { width: 100vw; right: 0vw; }
+  }
+  
+  @keyframes extended-tween {
+    from { width: 0vw; }
+    to { width: 55vw; }
+  }
+
+  @keyframes extended-tweenr {
+    from { width: 50vw; }
+    to { width: 0vw; }
+  }
+  
+  .experience-gui .experience-block:hover {
+    width:750px;
+  }

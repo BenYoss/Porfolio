@@ -1,0 +1,158 @@
+[
+    {
+        "name": "Jquery",
+        "image": "https://www.logolynx.com/images/logolynx/14/14773ee8c62814100ab9aaa0784f1cfb.gif",
+        "category": "Front-End",
+        "skillLevel": "4"
+    },
+    {
+        "name": "React",
+        "image": "https://cms-assets.tutsplus.com/uploads/users/1199/posts/30670/preview_image/react.jpg",
+        "category": "Front-End",
+        "skillLevel": "10"
+    },
+    {
+        "name": "AngularJS",
+        "image": "https://miro.medium.com/max/588/1*15CYVZdpsxir8KLdxEZytg.png",
+        "category": "Front-End",
+        "skillLevel": "3"
+    },
+    {
+        "name": "Grunt",
+        "image": "https://cdn-images-1.medium.com/fit/t/1600/480/1*mxw5tPK2wjT-O0YAGv4Tig.png",
+        "category": "Dev-Ops",
+        "skillLevel": "2"
+    },
+    {
+        "name": "Circle CI",
+        "image": "https://global-uploads.webflow.com/5aa21a8253e5bd0001f87db9/5ab1b8434ccef6c2bb481ef4_Circleci.png",
+        "category": "Dev-Ops",
+        "skillLevel": "5"
+    },
+    {
+        "name": "Javascript",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
+        "category": "Language",
+        "skillLevel": "10"
+    },
+    {
+        "name": "HTML",
+        "image": "https://hackr.io/tutorials/learn-html-5/logo/logo-html-5?ver=1587977020",
+        "category": "Language",
+        "skillLevel": "10"
+    },
+    {
+        "name": "CSS",
+        "image": "https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png",
+        "category": "Language",
+        "skillLevel": "10"
+    },
+    {
+        "name": "SASS",
+        "image": "https://i1.wp.com/css-tricks.com/wp-content/uploads/2019/09/sass-logo.png?fit=1200%2C600&ssl=1",
+        "category": "Language",
+        "skillLevel": "6"
+    },
+    {
+        "name": "MongoDB",
+        "image": "https://ih1.redbubble.net/image.438910675.6211/st,small,507x507-pad,600x600,f8f8f8.u2.jpg",
+        "category": "DBMS",
+        "skillLevel": "9"
+    },
+    {
+        "name": "MySQL",
+        "image": "https://www.freepnglogos.com/uploads/logo-mysql-png/logo-mysql-mysql-logo-png-images-are-download-crazypng-15.png",
+        "category": "DBMS",
+        "skillLevel": "9"
+    },
+    {
+        "name": "PostgresQL",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEKVQqpiPGcNzfDzfMLx8uE_IOfiT3PnNKvQ&usqp=CAU",
+        "category": "DBMS",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Ant Design",
+        "image": "https://www.bookmarks.design/media/image/ant-design.jpg",
+        "category": "UI-Framework",
+        "skillLevel": "6"
+    },
+    {
+        "name": "Bootstrap",
+        "image": "https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-social-logo.png",
+        "category": "UI-Framework",
+        "skillLevel": "9"
+    },
+    {
+        "name": "Material-UI",
+        "image": "data:image/png;base64,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",
+        "category": "UI-Framework",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Express",
+        "image": "https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png",
+        "category": "Server",
+        "skillLevel": "9"
+    },
+    {
+        "name": "Node",
+        "image": "https://pbs.twimg.com/profile_images/1262824892535373825/BiXDFDDp_400x400.jpg",
+        "category": "Server",
+        "skillLevel": "10"
+    },
+    {
+        "name": "Backbone",
+        "image": "data:image/png;base64,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",
+        "category": "MVC-Framework",
+        "skillLevel": "1"
+    },
+    {
+        "name": "Redis",
+        "image": "https://cdn.auth0.com/blog/logos/redis-icon-logo.png",
+        "category": "Server",
+        "skillLevel": "3"
+    },
+    {
+        "name": "Typescript",
+        "image": "https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png",
+        "category": "Language",
+        "skillLevel": "6"
+    },
+    {
+        "name": "Java",
+        "image": "https://i.dlpng.com/static/png/6653567_preview.png",
+        "category": "Language",
+        "skillLevel": "3"
+    },
+    {
+        "name": "ThreeJS",
+        "image": "https://img.stackshare.io/service/5883/preview.png",
+        "category": "Front-End",
+        "skillLevel": "7"
+    },
+    {
+        "name": "EJS (Embedded Javascript)",
+        "image": "data:image/png;base64,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",
+        "category": "Language",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Google Cloud Services",
+        "image": "https://seeklogo.com/images/G/google-cloud-logo-6B950E8ADB-seeklogo.com.png",
+        "category": "Dev-Ops",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Figma",
+        "image": "https://www.logolynx.com/images/logolynx/14/14773ee8c62814100ab9aaa0784f1cfb.gif",
+        "category": "Utilities",
+        "skillLevel": "9"
+    },
+    {
+        "name": "NextJS",
+        "image": "https://cdn.getshifter.co/caa65008efb706a8bfc6f7e4045d6a018420c3df/uploads/2020/11/nextjs.png",
+        "category": "Utilities",
+        "skillLevel": "6"
+    }
+]

@@ -19,10 +19,6 @@ const TetraUI: Function = ({
       mesh.current.rotation.x += 0.1;
       mesh.current.rotation.y += 0.1;
       mesh.current.rotation.z += 0.1;
-      if (x < 1.3) {
-        mesh.current.scale.set(x, x, x);
-        x += 0.05;
-      }
     } else if (!hovered[index] && x > 0.8) {
       x = 0.8;
     }
@@ -43,7 +39,10 @@ const TetraUI: Function = ({
     if (x === 0.8) {
       rendered = true;
     }
-    if (x <= 0.8 && !rendered) {
+    if (x > 0.8 && !rendered) {
+      x = 0.8;
+      mesh.current.scale.set(x, x, x);
+    } else if (x <= 0.8 && !rendered) {
       mesh.current.scale.set(x, x, x);
       x += 0.05;
     }

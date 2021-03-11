@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 // import Image from 'next/image';
 // import img from '../components/resources/image0.jpg';
 
-export default function About() {
+export default function About({ transClick, setTransClick }) {
   const [, setReload] = useState();
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function About() {
   return (
       <div className="about-container">
         <div className="nav-bar-about">
-          <Navbar />
+          <Navbar transClick={transClick} setTransClick={setTransClick} />
         </div>
         <div className="about-me-header">
           <h2>Hey! I'm Ben!</h2>
