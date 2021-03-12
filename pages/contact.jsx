@@ -32,13 +32,13 @@ export default function Contact({ transClick, setTransClick }) {
           <form name="app-form" data-netlify="true" method="POST" class="app-form">
             <input type="hidden" name="form-name" value="app-form" />
             <div class="app-form-group">
-              <input type="text" class="app-form-control" placeholder="NAME" />
+              <input name="app-form" type="text" class="app-form-control" placeholder="NAME" />
             </div>
             <div class="app-form-group">
-              <input type="text" class="app-form-control" placeholder="EMAIL" />
+              <input name="app-form" type="text" class="app-form-control" placeholder="EMAIL" />
             </div>
             <div class="app-form-group message">
-              <textarea type="text" class="app-form-control" placeholder="MESSAGE" />
+              <textarea name="app-form" type="text" class="app-form-control" placeholder="MESSAGE" />
             </div>
             <div class="app-form-group buttons">
               <button type="reset" class="app-form-button">CANCEL</button>
