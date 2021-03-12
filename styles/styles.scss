@@ -37,6 +37,14 @@ h3 {
   width: 60vw;
 }
 
+.guidance {
+  display: flex;
+  position: absolute;
+  top: 65%;
+  justify-content: center;
+  filter: invert(1);
+}
+
 .nav-bar-about {
   font-size: $titleSize * 0.5;
   display: flex;
@@ -47,6 +55,7 @@ h3 {
   // border-bottom: 5px solid #bbb;
   // border-radius: 5px;
   // box-shadow: 2px 2px 2px 2px black;
+  cursor:pointer;
 }
 
 .nav-bar-experience {
@@ -55,6 +64,7 @@ h3 {
   justify-content: center;
   // background-color: $color;
   color: white;
+  cursor:pointer;
   // border-top: 5px solid #bbb;
   // border-bottom: 5px solid #bbb;
   // border-radius: 5px;
@@ -68,6 +78,7 @@ h3 {
 
 .navbar-home :hover {
   color: yellow;
+  cursor:pointer;
 }
 
 .about-me-image {

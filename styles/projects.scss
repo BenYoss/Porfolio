@@ -110,23 +110,24 @@ $container-background: white;
     width:50px;  
   }
 
-  .extended {
-    position: absolute;
-    bottom: 0;
-    // left: 0vw;
-    height: 28.2vw;
-    word-break: break-word;
-    overflow: hidden;
-    color: white;
-    left:47vw;
-    font-size: x-small;
-    z-index: 3;
-    // max-width: fit-content;
-  }
+  // .extended {
+  //   position: absolute;
+  //   bottom: 0;
+  //   // left: 0vw;
+  //   height: 28.2vw;
+  //   word-break: break-word;
+  //   overflow: hidden;
+  //   color: white;
+  //   left:47vw;
+  //   font-size: x-small;
+  //   z-index: 3;
+  //   // max-width: fit-content;
+  // }
   .navbar-projects {
     font-size: 20 * 0.5;
     position: relative;
     left: 0;
+    cursor:pointer;
     color: black;
   }
 
@@ -179,4 +180,15 @@ $container-background: white;
   
   .experience-gui .experience-block:hover {
     width:750px;
+  }
+
+  .extended {
+    position: absolute;
+    bottom: 0;
+    width: 0vw;
+    height: 28.2vw;
+    overflow: hidden;
+    color: white;
+    left:47vw;
+    z-index: 3;
   }

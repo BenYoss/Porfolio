@@ -28,6 +28,9 @@ const Index = () => {
     exit="out">
         <div className="container-header">
             <h3 className="header-title"><span>Benjamin </span><span className="last-name"> Yoss</span></h3>
+            <div className="guidance header-title">
+              <img src="drag.png" alt="drag" width="20%" height="20%" />
+            </div>
             <div className="icon">
               <motion.img
               whileHover={{ scale: 1.1 }}
