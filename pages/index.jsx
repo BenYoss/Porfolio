@@ -32,38 +32,47 @@ const Index = () => {
               <img src="drag.png" alt="drag" width="20%" height="20%" />
             </div>
             <div className="icon">
-              <motion.img
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="icon-unit"
-              src="/icons/resumeicon.png"
-              alt="resumeicon"
-              width="3%"
-              height="3%" />
-              <motion.img
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="icon-unit"
-              src="/icons/githubicon.png"
-              alt="resumeicon"
-              width="3%"
-              height="3%" />
-              <motion.img
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="icon-unit"
-              src="/icons/mediumicon.png"
-              alt="resumeicon"
-              width="3%"
-              height="3%" />
-              <motion.img
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="icon-unit"
-              src="/icons/linkedinicon.png"
-              alt="resumeicon"
-              width="3%"
-              height="3%" />
+              <a href="https://drive.google.com/file/d/1GmxNqRy9gKLLy9p_u9w-51qRGiJ2cW8C/view?usp=sharing">
+                <motion.img
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="icon-unit"
+                src="/icons/resumeicon.png"
+                alt="resumeicon"
+                width="3%"
+                height="3%" />
+              </a>
+              <a href="https://github.com/BenYoss">
+                <motion.img
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="icon-unit"
+                src="/icons/githubicon.png"
+                alt="resumeicon"
+                width="3%"
+                height="3%" />
+              </a>
+              <a href="https://benyoss4.medium.com/">
+                <motion.img
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="icon-unit"
+                src="/icons/mediumicon.png"
+                alt="resumeicon"
+                width="3%"
+                height="3%" />
+              </a>
+              <a href="https://www.linkedin.com/in/benjaminyoss/">
+                <motion.img
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="icon-unit"
+                src="/icons/linkedinicon.png"
+                alt="resumeicon"
+                width="3%"
+                height="3%" />
+
+              </a>
             </div>
             <div className="header-icons">
             </div>

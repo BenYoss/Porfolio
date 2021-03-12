@@ -7,8 +7,8 @@ import projectInfo from '../components/project.info.json';
 export default function Contact({ transClick, setTransClick }) {
   const [, setReload] = useState();
   const [clicks, setClicks] = useState([false, false, false, false]);
-  const images = ['Quasibound.png', 'Barkpoint.png', 'Languine.png', 'Harbinger.png'];
-  const colors = ['#579dce', '#2f4f4f', '#343a40', '#ff6e3f'];
+  const images = ['Harbinger.png', 'Barkpoint.png', 'Languine.png', 'Quasibound.png'];
+  const colors = ['#ff6e3f', '#2f4f4f', '#343a40', '#579dce'];
   const onExtended = (index) => {
     const clickList = [...clicks];
     clickList[index] = !clickList[index];
@@ -47,6 +47,9 @@ export default function Contact({ transClick, setTransClick }) {
             } />
             <div id={`extended-${index}`} className="extended" key={index}>
               <h2 className="extended-desc">{projectInfo[index].title}</h2>
+              <div className="extended-desc">
+                <span className="extended-span">{`Overview: ${projectInfo[index].overview}`}</span>
+              </div>
               <div className="extended-desc">
                 <span className="extend-span">{projectInfo[index]['contrib-1']}</span>
                 <span>{' '}</span>
