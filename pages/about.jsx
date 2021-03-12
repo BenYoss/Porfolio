@@ -34,7 +34,6 @@ export default function About({ transClick, setTransClick }) {
                 and I enjoy <b>bringing ideas to life!</b>
             </span>
           </div>
-          {/* <Footer /> */}
         </div>
       </div>
   );
