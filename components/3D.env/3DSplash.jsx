@@ -24,7 +24,7 @@ const Splash3D = ({ router }) => {
         <pointLight position={[10, 0, 10]} intensity={2} />
         <DodeUI clicked={clicked} colors={color} hovered={hovered} setHovered={setHovered}
         setClicked={setClicked} router={router} />
-        <TextMesh position={[6, 1, 0]} index={0} />
+        <TextMesh position={[4.9, 1, 0]} index={0} />
         <TetraUI
         position={[3, 0, 0]}
         clicked={clicked}
@@ -33,7 +33,7 @@ const Splash3D = ({ router }) => {
         color={color[0]}
         setHovered={setHovered}
         index={0} />
-        <TextMesh position={[-6, 1, 0]} index={1} />
+        <TextMesh position={[-4.9, 1, 0]} index={1} />
         <TetraUI
         position={[-3, 0, 0]}
         clicked={clicked}
@@ -42,18 +42,18 @@ const Splash3D = ({ router }) => {
         color={color[1]}
         setHovered={setHovered}
         index={1} />
-        <TextMesh position={[-3.3, -0.9, 0]} index={2} />
+        <TextMesh position={[-3.2, -0.9, 0]} index={2} />
         <TetraUI
-        position={[-6, 0, 0]}
+        position={[-5, 0, 0]}
         clicked={clicked}
         setClicked={setClicked}
         hovered={hovered}
         color={color[2]}
         setHovered={setHovered}
         index={2} />
-        <TextMesh position={[3.3, -0.9, 0]} index={3} />
+        <TextMesh position={[3.2, -0.9, 0]} index={3} />
         <TetraUI
-        position={[6, 0, 0]}
+        position={[5, 0, 0]}
         clicked={clicked}
         setClicked={setClicked}
         hovered={hovered}
