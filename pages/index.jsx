@@ -39,8 +39,8 @@ const Index = () => {
                 className="icon-unit"
                 src="/icons/resumeicon.png"
                 alt="resumeicon"
-                width="3%"
-                height="3%" />
+                width="80%"
+                height="80%" />
               </a>
               <a href="https://github.com/BenYoss">
                 <motion.img
@@ -49,8 +49,8 @@ const Index = () => {
                 className="icon-unit"
                 src="/icons/githubicon.png"
                 alt="resumeicon"
-                width="3%"
-                height="3%" />
+                width="80%"
+                height="80%" />
               </a>
               <a href="https://benyoss4.medium.com/">
                 <motion.img
@@ -59,8 +59,8 @@ const Index = () => {
                 className="icon-unit"
                 src="/icons/mediumicon.png"
                 alt="resumeicon"
-                width="3%"
-                height="3%" />
+                width="80%"
+                height="80%" />
               </a>
               <a href="https://www.linkedin.com/in/benjaminyoss/">
                 <motion.img
@@ -69,8 +69,8 @@ const Index = () => {
                 className="icon-unit"
                 src="/icons/linkedinicon.png"
                 alt="resumeicon"
-                width="3%"
-                height="3%" />
+                width="80%"
+                height="80%" />
 
               </a>
             </div>
