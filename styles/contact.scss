@@ -121,6 +121,7 @@ $color-bg: #5191b3;
   .screen-body-item.left {
     display: flex;
     flex-direction: column;
+    flex: 0;
   }
   
   .app-title {
@@ -168,9 +169,12 @@ $color-bg: #5191b3;
     border: none;
     border-bottom: 1px solid #3e3e3e;
     color: $color-bg;
-    // font-size: 1vw;
     outline: none;
     transition: border-color .2s;
+
+    &textarea {
+      height: 100px;
+    }
   }
   
   .app-form-control::placeholder {
@@ -233,7 +237,7 @@ $color-bg: #5191b3;
     }
   
     .app-title span {
-      margin-right: 12px;
+      // margin-right: 20%;
     }
   
     .app-title:after {
