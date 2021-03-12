@@ -4,12 +4,17 @@
   position: absolute;
   height: auto;
   left: 20vw;
+  // opacity: 1;
   max-width: 3%;
   top: -4vw;
   z-index: 1;
   display: flex;
   flex-direction: column;
   filter: brightness(0) invert(1);
+}
+
+#icon {
+  opacity: 1;
 }
 
 .icon-unit {

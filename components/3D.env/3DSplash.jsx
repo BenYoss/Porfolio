@@ -7,10 +7,17 @@ import DodeUI from './models/Dodecahedron';
 import TetraUI from './models/AboutTetrahedron';
 import TextMesh from './models/MeshText';
 
-const Splash3D = ({ router }) => {
+const Splash3D = ({ router, dodeHover, setDodeHover }) => {
   const [hovered, setHovered] = React.useState([false, false, false, false, false]);
   const [clicked, setClicked] = React.useState([false, false, false, false]);
   const color = ['#F0FFFF', '#00CED1', '#9400D3', '#FF8C00'];
+
+  React.useEffect(() => {
+    if (hovered[4]) {
+      document.getElementById('icon').style.opacity = 0;
+      setDodeHover(true);
+    }
+  }, [hovered, dodeHover, setDodeHover]);
 
   return (
     <Canvas>

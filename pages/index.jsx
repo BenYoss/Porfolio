@@ -8,6 +8,7 @@ import Splash3D from '../components/3D.env/3DSplash';
 
 const Index = () => {
   const [threeEnv, setThreeEnv] = useState();
+  const [dodeHover, setDodeHover] = useState(false);
   const [clicked, setClicked] = useState([false, false, false, false]);
   const router = useRouter();
 
@@ -17,10 +18,10 @@ const Index = () => {
     }
     setTimeout(() => {
       setThreeEnv(<div className="three-env">
-                <Splash3D className="canvo" router={router} clicked={clicked} setClicked={setClicked} />
+                <Splash3D className="canvo" dodeHover={dodeHover} setDodeHover={setDodeHover} router={router} clicked={clicked} setClicked={setClicked} />
             </div>);
     }, 1400);
-  }, []);
+  }, [dodeHover]);
 
   return (
     <motion.div className="splash-container" variants={pageVariants} initial="initial"
@@ -31,7 +32,7 @@ const Index = () => {
             <div className="guidance header-title">
               <img src="drag.png" alt="drag" width="20%" height="20%" />
             </div>
-            <div className="icon">
+            <div id="icon" className="icon">
               <a href="https://drive.google.com/file/d/1GmxNqRy9gKLLy9p_u9w-51qRGiJ2cW8C/view?usp=sharing">
                 <motion.img
                 whileHover={{ scale: 1.1 }}
