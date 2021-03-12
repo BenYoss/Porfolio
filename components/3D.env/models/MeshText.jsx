@@ -7,7 +7,7 @@ import fonts from './fonts';
 
 extend({ Text });
 
-const text = ['About Me', 'Projects', 'Contact', 'Experience'];
+const text = ['About Me', 'Skills', 'Contact', 'Projects'];
 
 const TextMesh = ({ position, index }) => {
   const [rotation] = useState([0, 0, 0, 0]);

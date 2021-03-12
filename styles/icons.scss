@@ -1,0 +1,17 @@
+.icon {
+  margin-top: 5%;
+  width: auto;
+  position: absolute;
+  height: auto;
+  left: 20vw;
+  top: -4vw;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  filter: brightness(0) invert(1);
+}
+
+.icon-unit {
+    cursor:pointer;
+    margin-top: 0.3vw;
+}
