@@ -28,6 +28,42 @@ const Index = () => {
     exit="out">
         <div className="container-header">
             <h3 className="header-title"><span>Benjamin </span><span className="last-name"> Yoss</span></h3>
+            <div className="icon">
+              <motion.img
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="icon-unit"
+              src="/icons/resumeicon.png"
+              alt="resumeicon"
+              width="3%"
+              height="3%" />
+              <motion.img
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="icon-unit"
+              src="/icons/githubicon.png"
+              alt="resumeicon"
+              width="3%"
+              height="3%" />
+              <motion.img
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="icon-unit"
+              src="/icons/mediumicon.png"
+              alt="resumeicon"
+              width="3%"
+              height="3%" />
+              <motion.img
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              className="icon-unit"
+              src="/icons/linkedinicon.png"
+              alt="resumeicon"
+              width="3%"
+              height="3%" />
+            </div>
+            <div className="header-icons">
+            </div>
         </div>
         <div className="header-divider">
         </div>

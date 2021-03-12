@@ -113,15 +113,15 @@ $container-background: white;
   .extended {
     position: absolute;
     bottom: 0;
-    left: 0vw;
+    // left: 0vw;
     height: 28.2vw;
     word-break: break-word;
-    overflow:hidden;
+    overflow: hidden;
     color: white;
     left:47vw;
     font-size: x-small;
     z-index: 3;
-    max-width: fit-content;
+    // max-width: fit-content;
   }
   .navbar-projects {
     font-size: 20 * 0.5;
@@ -138,7 +138,7 @@ $container-background: white;
   .extend-span {
     margin-bottom: 5%;
     padding: 0%;
-    text-align: left;
+    // text-align: left;
   }
 
   .extended-tech {

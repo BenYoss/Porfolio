@@ -2,6 +2,7 @@ import '../styles/styles.scss';
 import '../styles/projects.scss';
 import '../styles/contact.scss';
 import '../styles/skills.scss';
+import '../styles/icons.scss';
 import { useState } from 'react';
 // import { AnimatePresence, motion } from 'framer-motion';
 // import pageVariants from '../components/animations/variants';

@@ -45,7 +45,7 @@ $color-bg: #5191b3;
     font-size: 12px;
   }
   
-  body, button, input {
+  body, button, input, textarea {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: 1.4px;
@@ -167,8 +167,7 @@ $color-bg: #5191b3;
     border: none;
     border-bottom: 1px solid #3e3e3e;
     color: $color-bg;
-    font-size: 14px;
-    text-transform: uppercase;
+    // font-size: 1vw;
     outline: none;
     transition: border-color .2s;
   }

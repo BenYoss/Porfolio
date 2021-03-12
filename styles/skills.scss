@@ -12,14 +12,30 @@ $test: 3;
     animation: about-layer-tween ease-out 2s;
 }
 
+.hex-box {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.hex-title {
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+}
+
 // Header meant to display the header for the skills page.
 .skills-header {
     background-color:#fff;
     width: 100%;
-    font-size: 3vw;
+    font-size: 2.4vw;
+    margin-top: 5vw;
     position: absolute;
     top: 1vw;
     left: 0;
+
+    &.lang {
+      font-size: 1vw;
+      position: relative
+    }
 }
 
 #hexGrid {
@@ -27,7 +43,7 @@ $test: 3;
     flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
-    margin-top: 15vw;
+    // margin-top: 20vw;
     // overflow: hidden;
     font-family: sans-serif;
     list-style-type: none;
@@ -125,7 +141,6 @@ $test: 3;
   top: 50%;
   text-align: center;
   text-transform: uppercase;
-      
   }
   
   .img {
@@ -138,8 +153,8 @@ $test: 3;
     background-size: cover;
     opacity: 90%;
     overflow: hidden;
-  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   }
   
   .img:before, .img:after {

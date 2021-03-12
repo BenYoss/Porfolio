@@ -37,7 +37,7 @@ export default function Contact({ transClick, setTransClick }) {
               <input class="app-form-control" placeholder="EMAIL" />
             </div>
             <div class="app-form-group message">
-              <input class="app-form-control" placeholder="MESSAGE" />
+              <textarea class="app-form-control" placeholder="MESSAGE" />
             </div>
             <div class="app-form-group buttons">
               <button class="app-form-button">CANCEL</button>
