@@ -14,8 +14,18 @@ h3 {
 
 .navbar-container {
   width: 100%;
-  :hover {
-    // background-color: white;
+}
+@mixin shift($value) {
+  @keyframes header-shift {
+    0% {
+      margin-top: $value;
+    }
+    50% {
+      margin-top: $value;
+    }
+    to {
+      margin-top: 0%;
+    }
   }
 }
 
@@ -166,7 +176,52 @@ h3 {
   border-top: 5px solid #bbb;
   border-bottom: 5px solid #bbb;
   border-radius: 5px;
+  @include shift(20%);
+  &.mobile {
+    // @include shift(50%);
+  }
   animation: header-shift ease-in-out 2s;
+}
+
+// .canvo {
+//   &.mobile {
+//     position: absolute;
+//   }
+// }
+
+.mobile-btn {
+  position: relative; 
+  z-index: 2;
+  width: 80%;
+  top: 30%;
+  left: 5%;
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+  font-size: 4vw;
+  box-shadow: 0 8px 6px -6px black;
+  &.about {
+    background-color: #FF8C00;
+    color: white;
+  }
+  &.contact {
+    background-color: #00CED1;
+    color: white;
+  }
+  &.projects {
+    background-color: #fff;
+  }
+  &.skills {
+    background-color: #9400D3;
+    color: white;
+  }
+}
+
+.text-button {
+  color: white;
+  &.projects {
+    color: black;
+  }
 }
 
 .splash-container {
@@ -226,6 +281,17 @@ html {
   color: $titleColor;
   font-size: $titleSize;
   animation: title-fade ease-in 2s;
+  &.mobile {
+    font-size: $titleSize * 2;
+  }
+
+  &.icon {
+    width: 60%;
+    left: 30%;
+    flex-direction: row;
+    border-left: #bbb;
+    border-right: #bbb;
+  }
 }
 
 @keyframes title-fade {
@@ -234,18 +300,6 @@ html {
   }
   to {
     opacity: 100%;
-  }
-}
-
-@keyframes header-shift {
-  0% {
-    margin-top: 20%;
-  }
-  50% {
-    margin-top: 20%;
-  }
-  to {
-    margin-top: 0%;
   }
 }
 

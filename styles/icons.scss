@@ -10,6 +10,12 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
+  &.mobile {
+    flex-direction: row;
+    max-width: 90%;
+    top: 23vw;
+    left: 18vw;
+  }
   filter: brightness(0) invert(1);
 }
 
@@ -19,5 +25,7 @@
 
 .icon-unit {
     cursor:pointer;
+    // display: inline-block;
     margin-top: 0.3vw;
+    margin-left: 1vw;
 }
