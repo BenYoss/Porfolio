@@ -26,18 +26,26 @@ const Index = () => {
     if (mobile) {
       setTimeout(() => {
         setThreeEnv(<div className="three-env">
-            <motion.div className="mobile-btn about" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ opacity: 1, scale: 1.1, filter: 'brightness(80%)' }} whileTap={{ scale: 0.9 }}>
-              <h3 className="text-button">About</h3>
-            </motion.div>
-            <motion.div className="mobile-btn projects" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1, filter: 'brightness(80%)' }} whileTap={{ scale: 0.9 }}>
-              <h3 className="text-button projects">Projects</h3>
-            </motion.div>
-            <motion.div className="mobile-btn contact" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1, filter: 'brightness(80%)' }} whileTap={{ scale: 0.9 }}>
-              <h3 className="text-button">Contact</h3>
-            </motion.div>
-            <motion.div className="mobile-btn skills" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1, filter: 'brightness(80%)' }} whileTap={{ scale: 0.9 }}>
-              <h3 className="text-button">Skills</h3>
-            </motion.div>
+            <a href="about">
+              <motion.div className="mobile-btn about" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ opacity: 1, scale: 1.1, filter: 'brightness(80%)' }} whileTap={{ scale: 0.9 }}>
+                <h3 className="text-button">About</h3>
+              </motion.div>
+            </a>
+            <a href="projects">
+              <motion.div className="mobile-btn projects" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1, filter: 'brightness(80%)' }} whileTap={{ scale: 0.9 }}>
+                <h3 className="text-button projects">Projects</h3>
+              </motion.div>
+            </a>
+            <a href="contact">
+              <motion.div className="mobile-btn contact" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1, filter: 'brightness(80%)' }} whileTap={{ scale: 0.9 }}>
+                <h3 className="text-button">Contact</h3>
+              </motion.div>
+            </a>
+            <a href="skills">
+              <motion.div className="mobile-btn skills" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} whileHover={{ scale: 1.1, filter: 'brightness(80%)' }} whileTap={{ scale: 0.9 }}>
+                <h3 className="text-button">Skills</h3>
+              </motion.div>
+            </a>
         </div>);
       }, 1400);
     } else {
