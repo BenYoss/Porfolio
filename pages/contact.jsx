@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 
 export default function Contact({ transClick, setTransClick }) {
   const [, setReload] = useState();
+  const [email, setEmail] = useState('');
 
   useEffect(() => {
     document.getElementsByTagName('html')[0].style.background = '#caf1f0';
@@ -32,13 +33,16 @@ export default function Contact({ transClick, setTransClick }) {
           <form name="app-form" data-netlify="true" method="POST" class="app-form">
             <input type="hidden" name="form-name" value="app-form" />
             <div class="app-form-group">
-              <input name="app-form" type="text" class="app-form-control" placeholder="NAME" />
+              <label htmlFor="name" />
+              <input name="app-form" id="name" type="text" class="app-form-control" placeholder="NAME" />
             </div>
             <div class="app-form-group">
-              <input name="app-form" type="text" class="app-form-control" placeholder="EMAIL" />
+              <label htmlFor="email" />
+              <input name="app-form" id="email" type="text" class="app-form-control" placeholder="EMAIL" onChange={(e) => setEmail(e.target.value)} />
             </div>
             <div class="app-form-group message">
-              <textarea name="app-form" type="text" class="app-form-control" placeholder="MESSAGE" />
+              <label htmlFor="message" />
+              <textarea name="app-form" id="message" type="text" class="app-form-control" placeholder="MESSAGE" />
             </div>
             <div class="app-form-group buttons">
               <button type="reset" class="app-form-button">CANCEL</button>
