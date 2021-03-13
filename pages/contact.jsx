@@ -34,15 +34,15 @@ export default function Contact({ transClick, setTransClick }) {
             <input type="hidden" name="form-name" value="app-form" />
             <p class="app-form-group">
               <label htmlFor="name" />
-              <input name="app-form" id="name" type="text" class="app-form-control" placeholder="NAME" />
+              <input name="name" id="name" type="text" class="app-form-control" placeholder="NAME" />
             </p>
             <p class="app-form-group">
               <label htmlFor="email" />
-              <input name="app-form" id="email" type="text" class="app-form-control" placeholder="EMAIL" onChange={(e) => setEmail(e.target.value)} />
+              <input name="email" id="email" type="text" class="app-form-control" placeholder="EMAIL" onChange={(e) => setEmail(e.target.value)} />
             </p>
             <p class="app-form-group message">
               <label htmlFor="message" />
-              <textarea name="app-form" id="message" type="text" class="app-form-control" placeholder="MESSAGE" />
+              <textarea name="message" id="message" type="text" class="app-form-control" placeholder="MESSAGE" />
             </p>
             <p class="app-form-group buttons">
               <button type="reset" class="app-form-button">CANCEL</button>
