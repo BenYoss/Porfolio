@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 
 export default function Contact({ transClick, setTransClick }) {
   const [, setReload] = useState();
-  const [email, setEmail] = useState('');
+  const [, setEmail] = useState('');
   const [mobile, isMobile] = useState(false);
 
   useEffect(() => {
