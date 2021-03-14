@@ -6,7 +6,7 @@ $container-background: white;
     bottom: 0;
 
     &:hover {
-      bottom: 10%;  
+      bottom: 10%;
       animation: grid-hover-anim ease-out 0.5s;
     }
 }
@@ -19,8 +19,12 @@ $container-background: white;
   background: black;
   color: $experience-title-color;
   &:hover {
-    // $container-background: blue;
     color: $experience-title-color;
+  }
+  &.mobile {
+    font-size: 12vw;
+    display: flex;
+    justify-content: c;
   }
 }
 
@@ -50,6 +54,10 @@ $container-background: white;
     overflow:hidden;
     box-shadow:1px 1px 3px 1px;
     animation: gui-tween ease-out 1s;
+    &.mobile {
+      animation: none;
+      margin: none;
+    }
   }
   
   
@@ -62,7 +70,27 @@ $container-background: white;
     -webkit-transition:all 0.7s;
     -moz-transition:all 0.7s;
     transition:all 0.7s;
-    box-shadow:-2px 0 10px 2px;
+    // box-shadow:-2px 0 10px 2px;
+    &.mobile {
+      position: absolute;
+      -webkit-transition:none;
+      -moz-transition:none;
+      transition:none;
+      width:25vw;
+      height:28.2vw;
+      transition: none;
+      left: 0;
+      margin: 2% 2.2% 2.2% 2%;
+      &.test-1 {
+        top: 70vw;
+      }
+      &.test-2 {
+        top: 110vw;
+      }
+      &.test-3 {
+        top: 150vw;
+      }
+    }
   }
   
   .experience-gui .experience-block:first-child {
@@ -95,6 +123,10 @@ $container-background: white;
       filter: brightness(100%);
       animation: bright ease-out 1s;
     }
+    &.mobile {
+      width: 94vw;
+      height: 40vw;
+    }
     transition: brightness(60%) 1s linear;
     -webkit-transition: brightness(60%) 1s linear;
   }
@@ -107,9 +139,8 @@ $container-background: white;
   $colors: #ff6e3f, #2f4f4f, #343a40, #579dce;
   
   .experience-gui:hover .experience-block {
-    width:50px;  
+    width:50px;
   }
-
   // .extended {
   //   position: absolute;
   //   bottom: 0;
@@ -134,6 +165,9 @@ $container-background: white;
   .extended-desc {
     margin: 5%;
     max-width: 60%;
+    &.mobile {
+      margin-left: 20%;
+    }
   }
 
   .extend-span {
@@ -145,6 +179,9 @@ $container-background: white;
   .extended-tech {
     margin: 5%;
     max-width: 70%;
+    &.mobile {
+      margin-left: 15%;
+    }
   }
 
   .extended-unit {
@@ -172,10 +209,19 @@ $container-background: white;
     from { width: 0vw; }
     to { width: 55vw; }
   }
+  @keyframes extended-tween-mobile {
+    from { height: 0vw; }
+    to { height: 100vw; }
+  }
 
   @keyframes extended-tweenr {
     from { width: 50vw; }
     to { width: 0vw; }
+  }
+
+  @keyframes extended-tweenr-mobile {
+    from { height: 100vw; }
+    to { height: 0vw; }
   }
   
   .experience-gui .experience-block:hover {
@@ -191,4 +237,23 @@ $container-background: white;
     color: white;
     left:47vw;
     z-index: 3;
+    &.mobile {
+      text-align: center;
+      left: 0;
+      width: 94vw;
+      height: 0vw;
+      &.test-0 {
+        top: 40vw;
+      }
+      &.test-1 {
+        top: 40vw;
+      }
+      &.test-2 {
+        top: 40vw;
+      }
+      &.test-3 {
+        top: 40vw;
+        margin-bottom: 20%;
+      }
+    }
   }

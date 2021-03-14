@@ -5,18 +5,32 @@ import Navbar from '../components/Navbar';
 
 export default function Contact({ transClick, setTransClick }) {
   const [, setReload] = useState();
-  const [email, setEmail] = useState('');
+  const [, setEmail] = useState('');
+  const [mobile, isMobile] = useState(false);
 
   useEffect(() => {
     document.getElementsByTagName('html')[0].style.background = '#caf1f0';
+    if (window.innerWidth < window.innerHeight) {
+      isMobile(true);
+    }
     setReload([]);
   }, []);
   return (
         <div className="contact-container">
+          {mobile ? (
+              <div className="contact-container">
+              <div className="nav-bar-about mobile">
+                <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+              </div>
+          </div>
+          ) : (
+            <div className="contact-container">
             <div className="nav-bar-about">
               <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </div>
-            <div>
+            </div>
+          )}
+        <div>
   <div class="container">
     <div class="screen">
       <div class="screen-header">
