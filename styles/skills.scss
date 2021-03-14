@@ -32,11 +32,60 @@ $test: 3;
     top: 1vw;
     left: 0;
 
+    &.mobile {
+      margin-top: 10vw;
+      font-size: 6vw;
+    }
+
     &.lang {
       font-size: 1vw;
-      position: relative
+      position: relative;
+      box-shadow: 0 10px 10px -6px black;
     }
 }
+
+#section03 a {
+  padding-top: 60vw;
+}
+#section03 a span {
+  position: absolute;
+  top: 100vw;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+#section03 a span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+#section03 a span::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  content: '';
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,.1);
+  border-radius: 100%;
+  opacity: 0;
+  box-sizing: border-box;
+}
+
 
 #hexGrid {
     display: flex;
@@ -61,7 +110,8 @@ $test: 3;
   .hex::after{
     content:'';
     display:block;
-    padding-bottom: 86.602%;  /* =  100 / tan(60) * 1.5 */
+    padding-bottom: 86.602%;
+      /* =  100 / tan(60) * 1.5 */
   }
   .hexIn{
     position: absolute;
@@ -81,7 +131,8 @@ $test: 3;
   .hexIn * {
     position: absolute;
     visibility: visible;
-    outline:1px solid transparent; /* fix for jagged edges in FF on hover transition */
+    outline:1px solid transparent;
+    box-shadow: 0 8px 6px -6px black; /* fix for jagged edges in FF on hover transition */
   }
   .hexLink {
       display:block;

@@ -15,6 +15,7 @@ h3 {
 .navbar-container {
   width: 100%;
 }
+
 @mixin shift($value) {
   @keyframes header-shift {
     0% {
@@ -34,10 +35,18 @@ h3 {
   font-size: $titleSize;
   position: absolute;
   background: white;
-  top: 15%;
+  top: 17%;
   left: 20%;
   color: #f7b93e;
   animation: about-header-tween ease-in-out 3s;
+  &.mobile {
+    animation: anone;
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    background: none;
+    top: 10%;
+  }
 }
 
 .projects-3D {
@@ -61,11 +70,15 @@ h3 {
   justify-content: center;
   // background-color: $color;
   color: white;
+  box-shadow: 0 8px 6px -6px black;
   // border-top: 5px solid #bbb;
   // border-bottom: 5px solid #bbb;
   // border-radius: 5px;
   // box-shadow: 2px 2px 2px 2px black;
   cursor:pointer;
+  &.mobile {
+    font-size: $titleSize * 2;
+  }
 }
 
 .nav-bar-experience {
@@ -79,11 +92,17 @@ h3 {
   // border-bottom: 5px solid #bbb;
   // border-radius: 5px;
   // box-shadow: 2px 2px 2px 2px black;
+  &.mobile {
+    font-size: $titleSize * 2;
+  }
 }
 
 .navbar-cluster {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 1% 0px 2% 5%;
+  box-shadow: 0 8px 6px -6px black;
+  &.mobile {
+    padding: 1% 0px 4% 5%;
+  }
 }
 
 .navbar-home :hover {
@@ -100,6 +119,11 @@ h3 {
   background-size: cover;
   width: 30vw;
   height: 30vw;
+  &.mobile {
+    width: 100%;
+    height: 40%;
+    left: 0;
+  }
   // animation: about-image-tween ease-out 2s;
 }
 
@@ -109,9 +133,15 @@ h3 {
   right: 5%;
   border: 5px solid #f7b93e;
   background: #f7b93e;
-  background-size: cover;
+  // background-size: cover;
   width: 30vw;
   animation: about-layer-tween ease-out 2s;
+  &.mobile {
+    width: 100%;
+    top: 100%;
+    left: 0;
+    height: 40%;
+  }
 }
 
 .about-description {
@@ -121,6 +151,16 @@ h3 {
   max-width: 48vw;
   top: 50%;
   animation: about-description-tween ease-out 4s;
+  &.mobile {
+    max-width: 100vw;
+    animation: about-description-tween ease-out 3s;
+    margin-left: 0vw;
+    top: 70%;
+    box-shadow: 0 8px 6px -6px black;
+    background-color: #fff;
+    margin-left: 0;
+    left: 0;
+  }
 }
 
 .about-body {
@@ -128,6 +168,9 @@ h3 {
   margin-top: 2%;
   background: white;
   animation: about-body-tween ease-out 1s;
+  &.mobile {
+    height: 30vw;
+  }
 }
 
 .experience-body {
@@ -190,10 +233,10 @@ h3 {
 // }
 
 .mobile-btn {
-  position: relative; 
+  position: absolute; 
   z-index: 2;
   width: 80%;
-  margin-top: 30%;
+  top: 30%;
   left: 5%;
   display: flex;
   justify-content: center;
@@ -203,17 +246,21 @@ h3 {
   &.about {
     background-color: #FF8C00;
     color: white;
+    top: 30%;
   }
   &.contact {
     background-color: #00CED1;
     color: white;
+    top: 40%;
   }
   &.projects {
     background-color: #fff;
+    top: 50%;
   }
   &.skills {
     background-color: #9400D3;
     color: white;
+    top: 60%;
   }
 }
 
@@ -332,11 +379,11 @@ html {
 
 @keyframes about-layer-tween {
   0% {
-    height: 40vw;
+    height: 70vw;
     top: 30%;
   }
   60% {
-    height: 40vw;
+    height: 70vw;
     top: 30%;
   }
   100% {
@@ -364,7 +411,7 @@ html {
   }
   100% {
     background: white;
-    top: 15%;
+    top: 17%;
   }
 }
 
