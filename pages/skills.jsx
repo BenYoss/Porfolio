@@ -59,9 +59,8 @@ export default function Skills({ transClick, setTransClick }) {
       <h1>My Skills</h1>
     </motion.div>
     <section id="section03" class="demo">
-  <h1>Scroll Down Button #3</h1>
-  <a href="#section04"><span></span>Scroll</a>
-  </section>
+      <a><span></span>Scroll</a>
+    </section>
     <motion.div variants={header} className="grid" animate="scale">
     <motion.div variants={header} initial="hidden" animate="language" className="skills-header lang">
       <motion.h1 className="hex-title">Programming Languages</motion.h1>
