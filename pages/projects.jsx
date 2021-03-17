@@ -105,7 +105,7 @@ export default function Contact({ transClick, setTransClick }) {
             </div>
             </div>
             <div className="experience-header">
-            <span>Previous Projects</span>
+            <span>Projects</span>
          </div>
     <ul className="experience-gui">
     {projectInfo.map((click, index) => {
