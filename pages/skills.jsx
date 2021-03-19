@@ -55,7 +55,7 @@ export default function Skills({ transClick, setTransClick }) {
               <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </div>
             <div></div>
-    <motion.div variants={header} initial="hidden" animate="visible" className="skills-header mobile">
+    <motion.div transition={{ duration: 1 }} variants={header} initial="hidden" animate="visible" className="skills-header mobile">
       <h1>My Skills</h1>
     </motion.div>
     <section id="section03" class="demo">
@@ -294,7 +294,7 @@ export default function Skills({ transClick, setTransClick }) {
               <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </div>
             <div></div>
-    <motion.div variants={header} initial="hidden" animate="visible" className="skills-header">
+    <motion.div variants={header} transition={{ duration: 1 }} initial="hidden" animate="visible" className="skills-header">
       <h1>My Skills</h1>
     </motion.div>
     <motion.div variants={header} className="grid" animate="scale">
