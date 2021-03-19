@@ -149,6 +149,8 @@ h3 {
   font-size: large;
   margin-left: 16vw;
   max-width: 48vw;
+  display: flex;
+  justify-content: center;
   top: 50%;
   animation: about-description-tween ease-out 4s;
   &.mobile {
