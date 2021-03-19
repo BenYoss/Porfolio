@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import projectInfo from '../components/project.info.json';
 
@@ -47,6 +48,20 @@ export default function Contact({ transClick, setTransClick }) {
     }
     setReload([]);
   }, []);
+  const header = {
+    hidden: {
+      opacity: 0,
+      width: 0,
+    },
+    visible: {
+      opacity: 1,
+      width: '100%',
+      duration: 3,
+    },
+    scale: {
+      scale: 0.8,
+    },
+  };
   return (
     <div className="experience-container">
           {mobile ? (
@@ -56,9 +71,10 @@ export default function Contact({ transClick, setTransClick }) {
                 <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
               </div>
           </div>
-          <div className="experience-header mobile">
+          <motion.div variants={header} transition={{ duration: 1 }} initial="hidden" animate="visible" className="experience-header mobile">
             <span>Projects</span>
-         </div>
+            <motion.span variants={header} transition={{ duration: 1, delay: 2 }} initial="hidden" animate="visible" className="experience-instr mobile"> - Hover and Click</motion.span>
+         </motion.div>
     <ul className="experience mobile">
     {projectInfo.map((click, index) => {
       const tech = projectInfo[index]['tech-used'].split(',');
@@ -104,9 +120,10 @@ export default function Contact({ transClick, setTransClick }) {
               <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </div>
             </div>
-            <div className="experience-header">
+            <motion.div transition={{ duration: 1 }} variants={header} initial="hidden" animate="visible" className="experience-header">
             <span>Projects</span>
-         </div>
+            <motion.span variants={header} transition={{ duration: 1, delay: 2 }} initial="hidden" animate="visible" className="experience-instr"> - Hover and Click</motion.span>
+         </motion.div>
     <ul className="experience-gui">
     {projectInfo.map((click, index) => {
       const tech = projectInfo[index]['tech-used'].split(',');

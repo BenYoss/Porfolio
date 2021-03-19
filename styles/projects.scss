@@ -60,7 +60,22 @@ $container-background: white;
     }
   }
   
-  
+  .experience-instr {
+    font-size: 3vw;
+    font-weight: 1;
+    background: black;
+    color: $experience-title-color;
+    &:hover {
+      color: $experience-title-color;
+    }
+    &.mobile {
+      font-size: 4vw;
+      display: flex;
+      padding-top: 6vw;
+      justify-content: c;
+    }
+  }
+
   .experience-block {
     position:relative;
     width:15vw;
