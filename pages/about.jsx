@@ -38,7 +38,7 @@ export default function About({ transClick, setTransClick }) {
                       and never hesitate on an idea. I prefer working in
                       collaboration rather than isolation, and I enjoy impacting
                       the lives of others and bringing ideas to life!
-                      Transitioning from my work to being a hobbiest, I
+                      Transitioning from my work to being a hobbyist, I
                       am a free-lance digital artist/animator, a technical writer,
                       a philosopher, a culinary scientist, and a graphic designer.
                   </span>
@@ -65,7 +65,7 @@ export default function About({ transClick, setTransClick }) {
                       and never hesitate on an idea. I prefer working in
                       collaboration rather than isolation, and I enjoy impacting
                       the lives of others and bringing ideas to life!
-                      Transitioning to being a hobbiest, I
+                      Transitioning to being a hobbyist, I
                       am a free-lance digital artist/animator, a technical writer,
                       a philosopher, a culinary scientist, and a graphic designer.
                   </span>
