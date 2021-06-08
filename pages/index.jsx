@@ -122,6 +122,7 @@ const Index = () => {
         ) : (
           <div>
                 <div className="container-header">
+                <div>
                 <table>
                   <tr>
                     <td>
@@ -132,6 +133,7 @@ const Index = () => {
                     </td>
                   </tr>
                 </table>
+                </div>
                 <div className="guidance header-title">
                   <img src="drag.png" alt="drag" width="20%" height="20%" />
                 </div>
