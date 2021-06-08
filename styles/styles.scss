@@ -12,6 +12,13 @@ h3 {
   color: $color;
 }
 
+.profile-picture {
+  border: 3px solid $titleColor;
+  vertical-align: center;
+  width: 120px;
+  height: 120px;
+}
+
 .navbar-container {
   width: 100%;
 }
