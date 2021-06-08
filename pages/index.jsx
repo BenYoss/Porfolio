@@ -125,7 +125,7 @@ const Index = () => {
                 <table>
                   <tr>
                     <td>
-                      <img src="https://avatars.githubusercontent.com/u/43221771?v=4" alt="benyossprofile" className="profile-picture"></img>
+                      <img src="BenYossProfile2.jpg" alt="benyossprofile" className="profile-picture"></img>
                     </td>
                     <td>
                       <h3 className="header-title"><span>Benjamin </span><span className="last-name"> Yoss</span></h3>
