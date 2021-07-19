@@ -14,6 +14,7 @@ class MyDocument extends Document {
         <Html>
           <Head>
             <link rel="icon" type="image/png" sizes="32x32" href="me.png" />
+            <meta property="og:image" content="benyossprofile2.png" />
             <title>Benjamin Yoss</title>
           </Head>
           <body>
