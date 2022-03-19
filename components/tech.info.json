@@ -120,9 +120,51 @@
         "skillLevel": "3"
     },
     {
+        "name": "Socket.io",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Socket-io.svg/330px-Socket-io.svg.png",
+        "category": "Server",
+        "skillLevel": "3"
+    },
+    {
+        "name": "Flask",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQl7BEwqp9RfFRZt_guSqMHxWC2zFqrI8-rQ&usqp=CAU",
+        "category": "Server",
+        "skillLevel": "3"
+    },
+    {
+        "name": "CockroachDB",
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/31/Cockroach_Labs_Logo.png",
+        "category": "DBMS",
+        "skillLevel": "3"
+    },
+    {
         "name": "Python",
         "image": "https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png",
         "category": "Language",
+        "skillLevel": "6"
+    },
+    {
+        "name": "ChartJS",
+        "image": "https://www.scicoding.com/content/images/2021/09/chartjs-logo-1.svg",
+        "category": "Front-End",
+        "skillLevel": "6"
+    },
+    {
+        "name": "FramerMotion",
+        "image": "https://cdn.sanity.io/images/oneb1r22/production/f07d289005d5be44fe6a045efdc0a796d230bfc8-774x560.jpg",
+        "category": "Front-End",
+        "skillLevel": "6"
+    },
+    {
+        "name": "CryptoJS",
+        "image": "https://www.outsystems.com/Forge_CW/_image.aspx/Q8LvY--6WakOw9afDCuuGXgH_hqJdgyu06j3qqvsbq4=/cryptojs",
+        "category": "Front-End",
+        "skillLevel": "6"
+    },
+    {
+        "name": "Django",
+        "image": "https://i0.wp.com/copyassignment.com/wp-content/uploads/2021/08/Django-logo.jpg?fit=474%2C474&ssl=1",
+        "category": "Server",
         "skillLevel": "6"
     },
     {
