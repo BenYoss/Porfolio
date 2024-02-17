@@ -14,6 +14,8 @@ $test: 3;
 
 .hex-box {
   background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius:10px;
 }
 
 .hex-title {
@@ -24,14 +26,16 @@ $test: 3;
 
 // Header meant to display the header for the skills page.
 .skills-header {
-    background-color:#fff;
+    background-color:#ffffffd8;
     width: 100%;
     font-size: 2.4vw;
     // margin-top: 5vw;
     position: absolute;
     top: 17%;
     left: 0;
-
+    padding-left:1%;
+    
+    border: 1px solid rgba(0,0,0,.125);
     &.mobile {
       // margin-top: 10vw;
       top: 10%;
@@ -42,6 +46,10 @@ $test: 3;
       font-size: 1vw;
       position: relative;
       box-shadow: 0 10px 10px -6px black;
+      border-radius:10px;
+      font-weight:500;
+      padding-top: 0.5%;
+      transform:scale(0.9);
     }
 }
 
@@ -171,9 +179,9 @@ $test: 3;
   #demo1 {
     color: white;
     text-transform: capitalize;
-      text-align: center;
-    bottom: 50%;
-    padding-top:50%;
+    text-align: center;
+    text-align: center;
+    margin-top: 30%;
     font-size: 1.7em;
     z-index: 1;
   }
@@ -232,15 +240,19 @@ $test: 3;
   
   .hexLink:hover h1, .hexLink:focus h1,
   .hexLink:hover p, .hexLink:focus p{
-  opacity:1;
+  opacity:0.8;
+  cursor:pointer;
   transition: 0.8s;
+  background-color:purple;
   }
   
   
   .hexIn:hover .img:before,
   .hexIn:hover .img:after,
   .hexIn:hover .hexLink {
-    opacity: 1;
+    opacity: 0.8;
+    cursor:pointer;
+    background-color:purple;
   }
   
   

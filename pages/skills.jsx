@@ -4,17 +4,19 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import skills from '../components/tech.info.json';
 import Navbar from '../components/Navbar';
+import dynamic from 'next/dynamic';
 
-export default function Skills({ transClick, setTransClick }) {
+export default dynamic(() => Promise.resolve(function Skills({ transClick, setTransClick }) {
   const [, setReload] = useState();
   const [mobile, isMobile] = useState(false);
 
   useEffect(() => {
+    document.body.style.overflow = "scroll";
+    document.body.style.overflowX = "hidden";
     if (window.innerWidth < window.innerHeight) {
       isMobile(true);
     }
     document.getElementsByTagName('html')[0].style.background = '#f168f5';
-    setReload([]);
   }, []);
 
   const header = {
@@ -52,7 +54,7 @@ export default function Skills({ transClick, setTransClick }) {
               mobile ? (
                 <div>
                   <div className="nav-bar-about mobile">
-              <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+              <Navbar style="nav-bar-about" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </div>
             <div></div>
     <motion.div transition={{ duration: 1 }} variants={header} initial="hidden" animate="visible" className="skills-header mobile">
@@ -76,7 +78,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -114,7 +116,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -137,7 +139,43 @@ export default function Skills({ transClick, setTransClick }) {
         }
       </motion.ul>
     </motion.div>
-
+    <motion.div variants={header} initial="hidden" animate="database" className="skills-header lang">
+      <motion.h1 className="hex-title">Data Science</motion.h1>
+      <motion.ul className="hex-box" id="hexGrid">
+        {
+          skills.map((skill, i) => {
+            const item = {
+              hidden: {
+                opacity: 0,
+                transition: { duration: 100 },
+                height: 0,
+              },
+              visible: {
+                opacity: 1,
+                height: 215,
+                transition: { duration: i / 100 },
+                scale: 0.8,
+              },
+            };
+            if (skill.category === 'DataSci') {
+              return (
+                <motion.li className="hex" whileHover={{ scale: 1.1 }} key={i} variants={item} initial="hidden" animate="visible">
+                  <div className="hexIn">
+                    <a className="hexLink">
+                      <div className="img">
+                        <img className="img" src={skill.image} alt="hex-icon" />
+                      </div>
+                      <h1 id="demo1">{skill.name}</h1>
+                    </a>
+                  </div>
+                </motion.li>
+              );
+            }
+            return '';
+          })
+        }
+      </motion.ul>
+    </motion.div>
     <motion.div variants={header} initial="hidden" animate="devops" className="skills-header lang">
       <motion.h1 className="hex-title">Dev-Ops</motion.h1>
       <motion.ul className="hex-box" id="hexGrid">
@@ -152,7 +190,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -176,7 +214,7 @@ export default function Skills({ transClick, setTransClick }) {
       </motion.ul>
     </motion.div>
     <motion.div variants={header} initial="hidden" animate="devops" className="skills-header lang">
-      <motion.h1 className="hex-title">Client</motion.h1>
+      <motion.h1 className="hex-title">Client Libraries/Frameworks</motion.h1>
       <motion.ul className="hex-box" id="hexGrid">
         {
           skills.map((skill, i) => {
@@ -189,7 +227,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -226,7 +264,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -263,11 +301,48 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
             if (skill.category === 'Server') {
+              return (
+                <motion.li className="hex" whileHover={{ scale: 1.1 }} key={i} variants={item} initial="hidden" animate="visible">
+                  <div className="hexIn">
+                    <a className="hexLink">
+                      <div className="img">
+                        <img className="img" src={skill.image} alt="hex-icon" />
+                      </div>
+                      <h1 id="demo1">{skill.name}</h1>
+                    </a>
+                  </div>
+                </motion.li>
+              );
+            }
+            return '';
+          })
+        }
+      </motion.ul>
+    </motion.div>
+    <motion.div variants={header} initial="hidden" animate="devops" className="skills-header lang">
+      <motion.h1 className="hex-title">Additional Technologies</motion.h1>
+      <motion.ul className="hex-box" id="hexGrid">
+        {
+          skills.map((skill, i) => {
+            const item = {
+              hidden: {
+                opacity: 0,
+                transition: { duration: 100 },
+                height: 0,
+              },
+              visible: {
+                opacity: 1,
+                height: 215,
+                transition: { duration: i / 100 },
+                scale: 0.8,
+              },
+            };
+            if (skill.category === 'AddTech') {
               return (
                 <motion.li className="hex" whileHover={{ scale: 1.1 }} key={i} variants={item} initial="hidden" animate="visible">
                   <div className="hexIn">
@@ -291,7 +366,7 @@ export default function Skills({ transClick, setTransClick }) {
               ) : (
                 <div>
                        <div className="nav-bar-about">
-              <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+              <Navbar style="nav-bar-about" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </div>
             <div></div>
     <motion.div variants={header} transition={{ duration: 1 }} initial="hidden" animate="visible" className="skills-header">
@@ -312,7 +387,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -350,7 +425,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -373,7 +448,43 @@ export default function Skills({ transClick, setTransClick }) {
         }
       </motion.ul>
     </motion.div>
-
+    <motion.div variants={header} initial="hidden" animate="database" className="skills-header lang">
+      <motion.h1 className="hex-title">Data Science</motion.h1>
+      <motion.ul className="hex-box" id="hexGrid">
+        {
+          skills.map((skill, i) => {
+            const item = {
+              hidden: {
+                opacity: 0,
+                transition: { duration: 100 },
+                height: 0,
+              },
+              visible: {
+                opacity: 1,
+                height: 215,
+                transition: { duration: i / 100 },
+                scale: 0.8,
+              },
+            };
+            if (skill.category === 'DataSci') {
+              return (
+                <motion.li className="hex" whileHover={{ scale: 1.1 }} key={i} variants={item} initial="hidden" animate="visible">
+                  <div className="hexIn">
+                    <a className="hexLink">
+                      <div className="img">
+                        <img className="img" src={skill.image} alt="hex-icon" />
+                      </div>
+                      <h1 id="demo1">{skill.name}</h1>
+                    </a>
+                  </div>
+                </motion.li>
+              );
+            }
+            return '';
+          })
+        }
+        </motion.ul>
+    </motion.div>
     <motion.div variants={header} initial="hidden" animate="devops" className="skills-header lang">
       <motion.h1 className="hex-title">Dev-Ops</motion.h1>
       <motion.ul className="hex-box" id="hexGrid">
@@ -388,7 +499,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -412,7 +523,7 @@ export default function Skills({ transClick, setTransClick }) {
       </motion.ul>
     </motion.div>
     <motion.div variants={header} initial="hidden" animate="devops" className="skills-header lang">
-      <motion.h1 className="hex-title">Client</motion.h1>
+      <motion.h1 className="hex-title">Client Libraries & Frameworks</motion.h1>
       <motion.ul className="hex-box" id="hexGrid">
         {
           skills.map((skill, i) => {
@@ -425,7 +536,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -462,7 +573,7 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
@@ -499,11 +610,48 @@ export default function Skills({ transClick, setTransClick }) {
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 10 },
+                transition: { duration: i / 100 },
                 scale: 0.8,
               },
             };
             if (skill.category === 'Server') {
+              return (
+                <motion.li className="hex" whileHover={{ scale: 1.1 }} key={i} variants={item} initial="hidden" animate="visible">
+                  <div className="hexIn">
+                    <a className="hexLink">
+                      <div className="img">
+                        <img className="img" src={skill.image} alt="hex-icon" />
+                      </div>
+                      <h1 id="demo1">{skill.name}</h1>
+                    </a>
+                  </div>
+                </motion.li>
+              );
+            }
+            return '';
+          })
+        }
+      </motion.ul>
+    </motion.div>
+    <motion.div variants={header} initial="hidden" animate="devops" className="skills-header lang">
+      <motion.h1 className="hex-title">Additional Technologies</motion.h1>
+      <motion.ul className="hex-box" id="hexGrid">
+        {
+          skills.map((skill, i) => {
+            const item = {
+              hidden: {
+                opacity: 0,
+                transition: { duration: 100 },
+                height: 0,
+              },
+              visible: {
+                opacity: 1,
+                height: 215,
+                transition: { duration: i / 100 },
+                scale: 0.8,
+              },
+            };
+            if (skill.category === 'AddTech') {
               return (
                 <motion.li className="hex" whileHover={{ scale: 1.1 }} key={i} variants={item} initial="hidden" animate="visible">
                   <div className="hexIn">
@@ -528,4 +676,4 @@ export default function Skills({ transClick, setTransClick }) {
             }
           </div>
   );
-}
+}), { ssr: false });

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "module": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
@@ -12,17 +13,25 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
+    "src/**/*",
     "**/*.ts",
-    "**/*.tsx"
-, "pages/_app.js", "components/3D.env/Controls.jsx", "components/3D.env/CSS3DSplash.tsx", "components/3D.env/models/MeshText.jsx", "components/3D.env/3DProjects.jsx", "components/3D.env/3DSplash.jsx", "components/3D.env/models/Projects.jsx"  ],
+    "**/*.tsx",
+    "pages/_app.js",
+    "components/3D.env/Controls.jsx",
+    "components/3D.env/CSS3DSplash.tsx",
+    "components/3D.env/models/MeshText.jsx",
+    "components/3D.env/3DProjects.jsx",
+    "components/3D.env/3DSplash.jsx",
+    "components/3D.env/models/Projects.jsx"
+  ],
   "exclude": [
     "node_modules"
   ]

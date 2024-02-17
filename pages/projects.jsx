@@ -4,13 +4,14 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import projectInfo from '../components/project.info.json';
+import dynamic from 'next/dynamic';
 
-export default function Contact({ transClick, setTransClick }) {
+export default dynamic(() => Promise.resolve(function Contact({ transClick, setTransClick }) {
   const [, setReload] = useState();
   const [clicks, setClicks] = useState([false, false, false, false]);
   const [mobile, isMobile] = useState(false);
-  const images = ['Harbinger.png', 'Barkpoint.png', 'Languine.png', 'Quasibound.png'];
-  const colors = ['#ff6e3f', '#2f4f4f', '#343a40', '#579dce'];
+  const images = ['Barkpoint.png', 'Languine.png', 'Quasibound.png', 'Ciphrase.png'];
+  const colors = ['#2f4f4f', '#343a40', '#579dce', '#1e5419'];
   const onExtended = (index) => {
     const clickList = [...clicks];
     clickList[index] = !clickList[index];
@@ -42,11 +43,12 @@ export default function Contact({ transClick, setTransClick }) {
     }
   };
   useEffect(() => {
+    document.body.style.overflowY = "hidden";
+    document.body.style.overflowX = "hidden";
     document.getElementsByTagName('html')[0].style.background = '#f5f6f6';
     if (window.innerWidth < window.innerHeight) {
       isMobile(true);
     }
-    setReload([]);
   }, []);
   const header = {
     hidden: {
@@ -68,7 +70,7 @@ export default function Contact({ transClick, setTransClick }) {
             <div>
               <div className="contact-container">
               <div className="nav-bar-about mobile">
-                <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+                <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
               </div>
           </div>
           <motion.div variants={header} transition={{ duration: 1 }} initial="hidden" animate="visible" className="experience-header mobile">
@@ -117,7 +119,7 @@ export default function Contact({ transClick, setTransClick }) {
             <div>
             <div className="contact-container">
             <div className="nav-bar-about">
-              <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+              <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </div>
             </div>
             <motion.div transition={{ duration: 1 }} variants={header} initial="hidden" animate="visible" className="experience-header">
@@ -165,4 +167,4 @@ export default function Contact({ transClick, setTransClick }) {
           )}
   </div>
   );
-}
+}), { ssr: false });

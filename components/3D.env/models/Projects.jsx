@@ -1,7 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import * as THREE from 'three';
-import { useFrame } from 'react-three-fiber';
+import { useFrame } from '@react-three/fiber';
 import { useSpring, animated } from 'react-spring/three';
+import dynamic from 'next/dynamic';
 
 const ProjectMesh = ({
   position, rotation, texture, clicked, setClicked, index,
@@ -67,4 +68,4 @@ const ProjectMesh = ({
   );
 };
 
-export default ProjectMesh;
+export default dynamic(() => Promise.resolve(ProjectMesh), { ssr: false });

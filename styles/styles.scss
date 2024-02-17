@@ -41,9 +41,9 @@ h3 {
 .about-me-header {
   font-size: $titleSize;
   position: absolute;
-  background: white;
   top: 17%;
   left: 20%;
+  background: none;
   color: #f7b93e;
   animation: about-header-tween ease-in-out 3s;
   &.mobile {
@@ -73,10 +73,9 @@ h3 {
 
 .nav-bar-about {
   font-size: $titleSize * 0.5;
-  display: flex;
-  justify-content: center;
   // background-color: $color;
   color: white;
+  text-decoration: none;
   box-shadow: 0 8px 6px -6px black;
   // border-top: 5px solid #bbb;
   // border-bottom: 5px solid #bbb;
@@ -90,15 +89,15 @@ h3 {
 
 .nav-bar-experience {
   font-size: $titleSize * 0.5;
-  display: flex;
-  justify-content: center;
   // background-color: $color;
   color: white;
-  cursor:pointer;
+  text-decoration: none;
+  box-shadow: 0 8px 6px -6px black;
   // border-top: 5px solid #bbb;
   // border-bottom: 5px solid #bbb;
   // border-radius: 5px;
   // box-shadow: 2px 2px 2px 2px black;
+  cursor:pointer;
   &.mobile {
     font-size: $titleSize * 2;
   }
@@ -122,7 +121,7 @@ h3 {
   top: 30%;
   right: 5%;
   border: 5px solid #f7b93e;
-  background: url("../public/image0.jpg");
+  background: url("../public/BenjaminYossNew.jpg");
   background-size: cover;
   width: 30vw;
   height: 30vw;
@@ -156,8 +155,11 @@ h3 {
   font-size: large;
   margin-left: 16vw;
   max-width: 48vw;
+  max-height: 45vh;
   display: flex;
   justify-content: center;
+  flex-direction:column;
+  column-gap:20px;
   top: 50%;
   animation: about-description-tween ease-out 4s;
   &.mobile {
@@ -172,10 +174,18 @@ h3 {
   }
 }
 
+.about-description-text {
+  line-height: 1.5;
+  font-weight: 150;
+  font-size:1.1vw;
+  font-family:"Montserrat",sans-serif;
+  color:rgb(23, 23, 23);
+}
+
 .about-body {
   height: 35vw;
   margin-top: 2%;
-  background: white;
+  background: rgb(255, 255, 255);
   animation: about-body-tween ease-out 1s;
   &.mobile {
     height: 30vw;
@@ -285,6 +295,8 @@ h3 {
   // padding: 10px 10px 10px 10px;
 }
 
+
+
 html {
   height: 100%;
   -webkit-background-size: cover;
@@ -331,8 +343,6 @@ html {
 		height: 200%;
 	}
 }
-
-
 
 .header-title {
   color: $titleColor;
