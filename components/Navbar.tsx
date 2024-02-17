@@ -2,14 +2,16 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 
 type Props = {
+    style: string,
     type: string,
     transClick: boolean,
     setTransClick: Function,
 }
 
-const Navbar: React.FC<Props> = ({ type, transClick, setTransClick }) => {
+const Navbar: React.FC<Props> = ({ style, type, transClick, setTransClick }) => {
   const [mobile, isMobile] = React.useState(false);
   React.useEffect(() => {
     if (window.innerWidth < window.innerHeight) {
@@ -22,7 +24,7 @@ const Navbar: React.FC<Props> = ({ type, transClick, setTransClick }) => {
             <div className="navbar-cluster">
               {/* <a className="arrow left">
               </a> */}
-              <Link href="/">
+              <Link className={style} href="/">
                 <motion.div
                  animate={{ opacity: 1, scale: 1 }}
                  whileHover={{ scale: 1.03, textShadow: '-2px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff' }}
@@ -40,9 +42,7 @@ const Navbar: React.FC<Props> = ({ type, transClick, setTransClick }) => {
             </div>
           ) : (
             <div className="navbar-cluster">
-            {/* <a className="arrow left">
-            </a> */}
-            <Link href="/">
+            <Link  className={style} href="/" >
               <motion.div
                animate={{ opacity: 1, scale: 1 }}
                whileHover={{ scale: 1.03, textShadow: '-2px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff' }}
@@ -63,4 +63,4 @@ const Navbar: React.FC<Props> = ({ type, transClick, setTransClick }) => {
   );
 };
 
-export default Navbar;
+export default dynamic(() => Promise.resolve(Navbar), { ssr: false });

@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { useFrame } from 'react-three-fiber';
+import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
 let rendered = false;
@@ -15,7 +15,12 @@ const TetraUI: Function = ({
     mesh.current.rotation.x = mouse.x * 0.2;
     mesh.current.rotation.z = mouse.y * 0.1;
     mesh.current.rotation.y += 0.003;
+    document.getElementsByTagName('canvas')[0].style.cursor = 'default';
+    if (hovered[0] || hovered[1] || hovered[2]) {
+      document.getElementsByTagName('canvas')[0].style.cursor = 'pointer';
+    }
     if (hovered[index]) {
+      document.getElementsByTagName('canvas')[0].style.cursor = 'pointer';
       mesh.current.rotation.x += 0.1;
       mesh.current.rotation.y += 0.1;
       mesh.current.rotation.z += 0.1;
@@ -39,10 +44,10 @@ const TetraUI: Function = ({
     if (x === 0.8) {
       rendered = true;
     }
-    if (x > 0.8 && !rendered) {
+    if (x > 0.8) {
       x = 0.8;
       mesh.current.scale.set(x, x, x);
-    } else if (x <= 0.8 && !rendered) {
+    } else if (x <= 0.8) {
       mesh.current.scale.set(x, x, x);
       x += 0.05;
     }

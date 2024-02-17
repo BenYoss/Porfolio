@@ -2,10 +2,11 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable no-use-before-define */
 import * as React from 'react';
-import { Canvas } from 'react-three-fiber';
+import { Canvas } from '@react-three/fiber';
 import DodeUI from './models/Dodecahedron';
 import TetraUI from './models/AboutTetrahedron';
 import TextMesh from './models/MeshText';
+import dynamic from 'next/dynamic';
 
 const Splash3D = ({ router, dodeHover, setDodeHover }) => {
   const [hovered, setHovered] = React.useState([false, false, false, false, false]);
@@ -13,6 +14,7 @@ const Splash3D = ({ router, dodeHover, setDodeHover }) => {
   const color = ['#F0FFFF', '#00CED1', '#9400D3', '#FF8C00'];
 
   React.useEffect(() => {
+    console.log('test');
     if (hovered[4]) {
       document.getElementById('icon').style.opacity = 0;
       setDodeHover(true);
@@ -71,4 +73,4 @@ const Splash3D = ({ router, dodeHover, setDodeHover }) => {
   );
 };
 
-export default Splash3D;
+export default dynamic(() => Promise.resolve(Splash3D), { ssr: false });

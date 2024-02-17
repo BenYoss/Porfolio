@@ -4,14 +4,14 @@
 /* eslint-disable no-use-before-define */
 import * as React from 'react';
 import { IPost } from './index';
-
+import dynamic from 'next/dynamic';
 type Props = {
     form: (e: React.FormEvent, formData: IPost) => void,
 };
 
 const Navba: React.FC<Props> = ({ form }) => {
   const [data, setData] = React.useState([]);
-
+  
   return (
         <div>
             <h2>This will be the navbar</h2>
@@ -19,4 +19,4 @@ const Navba: React.FC<Props> = ({ form }) => {
   );
 };
 
-export default Navba;
+export default dynamic(() => Promise.resolve(Navba), { ssr: false });

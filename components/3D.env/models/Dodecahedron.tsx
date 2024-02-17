@@ -1,14 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
-import { useFrame } from 'react-three-fiber';
+import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
 let x: number = 0.01;
+const realColors = {
+  '#F0FFFF': '#f5f6f6',
+  '#00CED1': '#caf1f0',
+  '#9400D3': '#f168f5',
+  '#FF8C00': '#f7b93e'
+}
 const DodeUI: Function = ({
   colors, clicked, hovered, setHovered, setClicked, router,
 }) => {
   const [color, setColor] = useState('#1B1B1B');
   const [recordedClick, setRecordedClick] = useState(0);
   const [, setReload] = useState([]);
+  const [activated, setActivated] = useState(false);
   const urls = ['/projects', '/contact', '/skills', '/about'];
 
   const mesh = useRef<THREE.Object3D>();
@@ -19,8 +26,9 @@ const DodeUI: Function = ({
         router.push(urls[recordedClick]);
         x = 1.0;
       }, 2700);
+
     }
-  }, [x, router]);
+  }, [x, router, clicked, colors]);
 
   useFrame(({ mouse }) => {
     mesh.current.rotation.x = mouse.x * 0.2;
@@ -29,6 +37,7 @@ const DodeUI: Function = ({
     if (hovered[4]) {
       colors.forEach((type, i) => {
         if (clicked[i]) {
+          setActivated(true);
           setColor(type);
         }
       });
@@ -43,7 +52,6 @@ const DodeUI: Function = ({
             }
           }
           setTimeout(() => {
-            setReload([]);
           }, 2000);
         }
       });
@@ -79,7 +87,11 @@ const DodeUI: Function = ({
           setHovered(hoveredList);
         }}>
             <dodecahedronBufferGeometry attach="geometry" args={[1, 1]} />
-            <meshPhongMaterial attach="material" color={color} flatShading shininess={4} />
+            {activated ? (
+              <meshBasicMaterial attach="material" color={realColors[color]} toneMapped={false} />
+            ) : (
+              <meshPhongMaterial attach="material" color={color}  flatShading shininess={4} toneMapped={false} />
+            )}
         </mesh>
   );
 };

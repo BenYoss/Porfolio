@@ -1,14 +1,5 @@
 [
     {
-        "title": "Harbinger",
-        "overview": "Search engine for freely posting reviews and rating a website.",
-        "contrib-1": "Integrated a google authentication system using PassportJS.",
-        "contrib-2": "Inserted instantaneous search engine with Azure’s Bing search API to add dynamic review routing using React Hooks.",
-        "contrib-3": "Forged advanced schema architecture using Sequelize to manage users/reviews.",
-        "contrib-4": "",
-        "tech-used": "MySQL, React-Router, Webpack, React, Oauth, Microsoft-Azure-Cognitive-Services, Material-UI, Google-Cloud-Services"
-    },
-    {
         "title": "Barkpoint",
         "overview": "Web application that gives users toy suggestions for their dog.",
         "contrib-1": "Created a no-SQL schema and persistence methods using Mongoose.",
@@ -34,5 +25,14 @@
         "contrib-3": "Inserted object animations and element tweens using CSS keyframes and CSS3D useFrames.",
         "contrib-4": "",
         "tech-used": "Postgresql, ThreeJS, Webpack, RTF, React, React-Router, ML5, Socket.io, Oauth, Underscore, AntDesign, Google-Cloud-Services"
+    },
+    {
+        "title": "Ciphrase",
+        "overview": "Addictive word game that sends daily brain teasers to share and compete with friends.",
+        "contrib-1": "Utilized ",
+        "contrib-2": "Inserted instantaneous search engine with Azure’s Bing search API to add dynamic review routing using React Hooks.",
+        "contrib-3": "Forged advanced schema architecture using Sequelize to manage users/reviews.",
+        "contrib-4": "",
+        "tech-used": "MySQL, React-Router, Webpack, React, Oauth, Microsoft-Azure-Cognitive-Services, Material-UI, Google-Cloud-Services"
     }
 ]

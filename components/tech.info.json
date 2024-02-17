@@ -12,9 +12,27 @@
         "skillLevel": "10"
     },
     {
-        "name": "AngularJS",
+        "name": "Vue.js",
+        "image": "https://miro.medium.com/v2/resize:fit:1200/1*qHsE-PM5TLmqzmYjmlr6-A.png",
+        "category": "Front-End",
+        "skillLevel": "10"
+    },
+    {
+        "name": "C++",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png",
+        "category": "Language",
+        "skillLevel": "3"
+    },
+    {
+        "name": "Angular",
         "image": "https://miro.medium.com/max/588/1*15CYVZdpsxir8KLdxEZytg.png",
         "category": "Front-End",
+        "skillLevel": "3"
+    },
+    {
+        "name": "Azure Services",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/640px-Microsoft_Azure.svg.png",
+        "category": "Dev-Ops",
         "skillLevel": "3"
     },
     {
@@ -30,20 +48,38 @@
         "skillLevel": "5"
     },
     {
-        "name": "Javascript",
+        "name": "JavaScript",
         "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
         "category": "Language",
         "skillLevel": "10"
     },
     {
-        "name": "HTML",
-        "image": "https://hackr.io/tutorials/learn-html-5/logo/logo-html-5?ver=1587977020",
-        "category": "Language",
+        "name": "Git Version Control",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
+        "category": "AddTech",
         "skillLevel": "10"
     },
     {
-        "name": "CSS",
-        "image": "https://www.logolynx.com/images/logolynx/ee/ee6197d1b17644329226e0587dce4a9c.png",
+        "name": "Jira",
+        "image": "https://store-images.s-microsoft.com/image/apps.60333.972ef998-9cea-47ce-b06b-160ef818806e.9fd711c5-d061-4a7d-bfaa-456676dfba0c.8a3db838-2bc4-47a6-bfdb-316a3aea1bf7.png",
+        "category": "AddTech",
+        "skillLevel": "10"
+    },
+    {
+        "name": "Unix Bash Terminal",
+        "image": "https://cdn0.iconfinder.com/data/icons/tab-bar-ios-and-wp8-vector-icons/48/linux-512.png",
+        "category": "AddTech",
+        "skillLevel": "10"
+    },
+    {
+        "name": "Figma",
+        "image": "https://static-00.iconduck.com/assets.00/figma-icon-2048x2048-lvgft610.png",
+        "category": "AddTech",
+        "skillLevel": "10"
+    },
+    {
+        "name": "TypeScript",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
         "category": "Language",
         "skillLevel": "10"
     },
@@ -66,9 +102,57 @@
         "skillLevel": "9"
     },
     {
-        "name": "PostgresQL",
+        "name": "PostgreSQL",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEKVQqpiPGcNzfDzfMLx8uE_IOfiT3PnNKvQ&usqp=CAU",
         "category": "DBMS",
+        "skillLevel": "7"
+    },
+    {
+        "name": "CosmosDB",
+        "image": "https://www.zdnet.com/a/img/resize/3f25a5dfc4406099c2ad35f9e12e884d2cfcddf7/2020/03/05/1a172cdf-119c-48f9-bcea-7677e0aff84e/freetierazurecosmosdb.jpg?auto=webp&fit=crop&height=900&width=1200",
+        "category": "DBMS",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Pandas",
+        "image": "https://pandas.pydata.org//static/img/favicon_white.ico",
+        "category": "DataSci",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Matplotlib",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Created_with_Matplotlib-logo.svg/2048px-Created_with_Matplotlib-logo.svg.png",
+        "category": "DataSci",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Numpy",
+        "image": "https://cdn.worldvectorlogo.com/logos/numpy-1.svg",
+        "category": "DataSci",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Scikit-Learn",
+        "image": "https://ih1.redbubble.net/image.551945823.6297/st,small,507x507-pad,600x600,f8f8f8.jpg",
+        "category": "DataSci",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Tensorflow",
+        "image": "https://static-00.iconduck.com/assets.00/tensorflow-icon-955x1024-hd4xzbqj.png",
+        "category": "DataSci",
+        "skillLevel": "7"
+    },
+    {
+        "name": "Azure Data Factory",
+        "image": "data:image/png;base64,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",
+        "category": "DataSci",
+        "skillLevel": "7"
+    },
+    {
+        "name": "OpenAI",
+        "image": "https://images.squarespace-cdn.com/content/v1/61448910c1763233f3a59e1d/1679603572712-XK19Y30UZ2VN4GWVLY9T/chatgpt-icon-2-1000.jpg?format=1000w",
+        "category": "DataSci",
         "skillLevel": "7"
     },
     {
@@ -97,7 +181,7 @@
     },
     {
         "name": "Express",
-        "image": "https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png",
+        "image": "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png",
         "category": "Server",
         "skillLevel": "9"
     },
@@ -132,7 +216,7 @@
         "skillLevel": "3"
     },
     {
-        "name": "CockroachDB",
+        "name": "Cockroach DB",
         "image": "https://upload.wikimedia.org/wikipedia/en/3/31/Cockroach_Labs_Logo.png",
         "category": "DBMS",
         "skillLevel": "3"
@@ -150,7 +234,7 @@
         "skillLevel": "6"
     },
     {
-        "name": "FramerMotion",
+        "name": "Framer Motion",
         "image": "https://cdn.sanity.io/images/oneb1r22/production/f07d289005d5be44fe6a045efdc0a796d230bfc8-774x560.jpg",
         "category": "Front-End",
         "skillLevel": "6"

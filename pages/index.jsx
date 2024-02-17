@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 import pageVariants from '../components/animations/variants';
 import Splash3D from '../components/3D.env/3DSplash';
+import dynamic from 'next/dynamic';
 
 const Index = () => {
   const [threeEnv, setThreeEnv] = useState();
@@ -14,6 +15,8 @@ const Index = () => {
   const router = useRouter();
 
   useEffect(() => {
+    document.body.style.overflowY = "hidden";
+    document.body.style.overflowX = "hidden";
     if (window.innerWidth < window.innerHeight) {
       isMobile(true);
     }
@@ -80,7 +83,7 @@ const Index = () => {
                     width="18%"
                     height="80%" />
                   </a>
-                  <a href="https://drive.google.com/file/d/1GmxNqRy9gKLLy9p_u9w-51qRGiJ2cW8C/view?usp=sharing">
+                  <a href="https://drive.google.com/file/d/1tG5cArhJC-Zmi_mWF7HBG-ulmkkFchmj/view?usp=sharing">
                     <motion.img
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -126,9 +129,6 @@ const Index = () => {
                 <table>
                   <tr>
                     <td>
-                      <img src="benyossprofile2.png" alt="benyossprofile" className="profile-picture"></img>
-                    </td>
-                    <td>
                       <h3 className="header-title"><span>Benjamin </span><span className="last-name"> Yoss</span></h3>
                     </td>
                   </tr>
@@ -138,7 +138,7 @@ const Index = () => {
                   <img src="drag.png" alt="drag" width="20%" height="20%" />
                 </div>
                 <div id="icon" className="icon">
-                  <a href="https://drive.google.com/file/d/1GmxNqRy9gKLLy9p_u9w-51qRGiJ2cW8C/view?usp=sharing">
+                  <a href="https://drive.google.com/file/d/1tG5cArhJC-Zmi_mWF7HBG-ulmkkFchmj/view?usp=sharing">
                     <motion.img
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -194,4 +194,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default dynamic(() => Promise.resolve(Index), { ssr: false });

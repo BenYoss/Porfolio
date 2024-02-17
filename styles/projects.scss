@@ -12,14 +12,17 @@ $container-background: white;
 }
 
 .experience-container {
+  overflow:hidden;
 }
 
 .experience-header {
   font-size: 6vw;
   background: black;
+  min-height:10%;
   color: $experience-title-color;
   &:hover {
     color: $experience-title-color;
+    min-height:10%;
   }
   &.mobile {
     font-size: 12vw;
@@ -42,7 +45,7 @@ $container-background: white;
     padding:0;
     margin:0;
     position:absolute;
-    top:10%;
+    top:20%;
     bottom:0;
     left:0;
     right:0;
@@ -137,6 +140,7 @@ $container-background: white;
     &:hover {
       filter: brightness(100%);
       animation: bright ease-out 1s;
+      cursor:pointer;
     }
     &.mobile {
       width: 94vw;

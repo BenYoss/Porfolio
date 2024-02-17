@@ -2,6 +2,7 @@
 /* eslint-disable import/extensions */
 import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
+import dynamic from 'next/dynamic';
 
 export default function Contact({ transClick, setTransClick }) {
   const [, setReload] = useState();
@@ -9,24 +10,25 @@ export default function Contact({ transClick, setTransClick }) {
   const [mobile, isMobile] = useState(false);
 
   useEffect(() => {
+    document.body.style.overflowY = "hidden";
+    document.body.style.overflowX = "hidden";
     document.getElementsByTagName('html')[0].style.background = '#caf1f0';
     if (window.innerWidth < window.innerHeight) {
       isMobile(true);
     }
-    setReload([]);
   }, []);
   return (
         <div className="contact-container">
           {mobile ? (
               <div className="contact-container">
               <div className="nav-bar-about mobile">
-                <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+                <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
               </div>
           </div>
           ) : (
             <div className="contact-container">
             <div className="nav-bar-about">
-              <Navbar type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+              <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </div>
             </div>
           )}
