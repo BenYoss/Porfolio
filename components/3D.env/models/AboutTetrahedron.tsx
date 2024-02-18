@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
 
 let rendered = false;
 let x: number = 0.01;
@@ -8,8 +7,7 @@ let x: number = 0.01;
 const TetraUI: Function = ({
   position, clicked, hovered, setHovered, color, index, setClicked,
 }) => {
-  const mesh = useRef<THREE.Object3D>();
-
+  const mesh = useRef<any>();
   useFrame(({ mouse }) => {
     mesh.current.position.y = -2;
     mesh.current.rotation.x = mouse.x * 0.2;

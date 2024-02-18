@@ -3,6 +3,7 @@
 /* eslint-disable no-use-before-define */
 import * as React from 'react';
 import dynamic from 'next/dynamic';
+
 type Props = {
 };
 const AboutMe: React.FC<Props> = () => (

@@ -1,16 +1,13 @@
-import { useEffect, useState, useRef } from 'react';
-import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
 import { useSpring, animated } from 'react-spring/three';
 import dynamic from 'next/dynamic';
 
 const ProjectMesh = ({
-  position, rotation, texture, clicked, setClicked, index,
+  position, texture, clicked, setClicked, index,
 }) => {
   // const mesh = useRef<THREE.Object3D>();
-  const x = 3;
   const {
-    color, rot, pos, scale,
+    color, pos,
   } = useSpring({
     color: clicked ? 'white' : 'red',
     pos: clicked ? [position[index][0], position[index][1], position[index][2]]
@@ -55,7 +52,6 @@ const ProjectMesh = ({
         <animated.mesh position={pos} onClick={() => {
           const clickList = [...clicked];
           const test = [...clickList];
-          console.log(test.splice(index, 1).includes(true));
           if (!test.splice(index, 1).includes(true)) {
             clickList[index] = !clickList[index];
           }

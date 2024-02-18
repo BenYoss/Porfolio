@@ -1,13 +1,13 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
+/* eslint-disable prefer-arrow-callback */
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import Navbar from '../components/Navbar';
 import projectInfo from '../components/project.info.json';
-import dynamic from 'next/dynamic';
 
 export default dynamic(() => Promise.resolve(function Contact({ transClick, setTransClick }) {
-  const [, setReload] = useState();
   const [clicks, setClicks] = useState([false, false, false, false]);
   const [mobile, isMobile] = useState(false);
   const images = ['Barkpoint.png', 'Languine.png', 'Quasibound.png', 'Ciphrase.png'];
@@ -43,8 +43,8 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
     }
   };
   useEffect(() => {
-    document.body.style.overflowY = "hidden";
-    document.body.style.overflowX = "hidden";
+    document.body.style.overflowY = 'hidden';
+    document.body.style.overflowX = 'hidden';
     document.getElementsByTagName('html')[0].style.background = '#f5f6f6';
     if (window.innerWidth < window.innerHeight) {
       isMobile(true);
@@ -69,9 +69,9 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
           {mobile ? (
             <div>
               <div className="contact-container">
-              <div className="nav-bar-about mobile">
+              <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about mobile">
                 <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
-              </div>
+              </motion.div>
           </div>
           <motion.div variants={header} transition={{ duration: 1 }} initial="hidden" animate="visible" className="experience-header mobile">
             <span>Projects</span>
@@ -91,19 +91,20 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
               <div className="extended-desc mobile">
                 <span className="extended-span">{`Overview: ${projectInfo[index].overview}`}</span>
               </div>
-              <div className="extended-desc mobile">
-                <span className="extend-span">{projectInfo[index]['contrib-1']}</span>
-                <span>{' '}</span>
-                <br />
-                <span className="extend-span">{projectInfo[index]['contrib-2']}</span>
-                <span>{' '}</span>
-                <br />
-                <span className="extend-span">{projectInfo[index]['contrib-3']}</span>
-                <span>{' '}</span>
-                <br />
-                <span className="extend-span">{projectInfo[index]['contrib-4']}</span>
-                <span>{' '}</span>
-              </div>
+              <ul className="extended-desc">
+                {projectInfo[index]['contrib-1'] && 
+                <li className="extend-span">{projectInfo[index]['contrib-1']}
+                </li>}
+                {projectInfo[index]['contrib-2'] && 
+                <li className="extend-span">{projectInfo[index]['contrib-2']}
+                </li>}
+                {projectInfo[index]['contrib-3'] && 
+                <li className="extend-span">{projectInfo[index]['contrib-3']}
+                </li>}
+                {projectInfo[index]['contrib-4'] && 
+                <li className="extend-span">{projectInfo[index]['contrib-4']}
+                </li>}
+              </ul>
               <div className="extended-tech mobile">
                 {tech.map((technology, i) => (
                     <span className="extended-unit" key={i}>{technology}</span>
@@ -118,9 +119,9 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
           ) : (
             <div>
             <div className="contact-container">
-            <div className="nav-bar-about">
-              <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
-            </div>
+            <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about">
+                <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+            </motion.div>
             </div>
             <motion.div transition={{ duration: 1 }} variants={header} initial="hidden" animate="visible" className="experience-header">
             <span>Projects</span>
@@ -140,19 +141,20 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
               <div className="extended-desc">
                 <span className="extended-span">{`Overview: ${projectInfo[index].overview}`}</span>
               </div>
-              <div className="extended-desc">
-                <span className="extend-span">{projectInfo[index]['contrib-1']}</span>
-                <span>{' '}</span>
-                <br />
-                <span className="extend-span">{projectInfo[index]['contrib-2']}</span>
-                <span>{' '}</span>
-                <br />
-                <span className="extend-span">{projectInfo[index]['contrib-3']}</span>
-                <span>{' '}</span>
-                <br />
-                <span className="extend-span">{projectInfo[index]['contrib-4']}</span>
-                <span>{' '}</span>
-              </div>
+              <ul className="extended-desc">
+                {projectInfo[index]['contrib-1'] && 
+                <li className="extend-span">{projectInfo[index]['contrib-1']}
+                </li>}
+                {projectInfo[index]['contrib-2'] && 
+                <li className="extend-span">{projectInfo[index]['contrib-2']}
+                </li>}
+                {projectInfo[index]['contrib-3'] && 
+                <li className="extend-span">{projectInfo[index]['contrib-3']}
+                </li>}
+                {projectInfo[index]['contrib-4'] && 
+                <li className="extend-span">{projectInfo[index]['contrib-4']}
+                </li>}
+              </ul>
               <div className="extended-tech">
                 {tech.map((technology, i) => (
                     <span className="extended-unit" key={i}>{technology}</span>
