@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=production node server/index.js",
     "dev": "next",
-    "build": "next build && next start"
+    "build": "next build"
   },
   "repository": {
     "type": "git",
