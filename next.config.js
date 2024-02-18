@@ -3,4 +3,5 @@ module.exports = {
     domains: ['https://i.imgur.com/'],
   },
   reactStrictMode: false,
+  output: 'export',
 };
