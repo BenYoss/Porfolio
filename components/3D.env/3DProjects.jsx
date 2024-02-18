@@ -5,8 +5,8 @@ import {
   useState, useEffect, Suspense, useRef,
 } from 'react';
 import { Canvas } from '@react-three/fiber';
-import ProjectMesh from './models/Projects';
 import dynamic from 'next/dynamic';
+import ProjectMesh from './models/Projects';
 
 const position = [[0, -4, 0], [0, 0, 0], [0, 4, 0]];
 const Projects3D = () => {

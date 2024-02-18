@@ -2,10 +2,10 @@
 /* eslint-disable import/no-unresolved */
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import pageVariants from '../components/animations/variants';
 import Splash3D from '../components/3D.env/3DSplash';
-import dynamic from 'next/dynamic';
 
 const Index = () => {
   const [threeEnv, setThreeEnv] = useState();
@@ -15,8 +15,8 @@ const Index = () => {
   const router = useRouter();
 
   useEffect(() => {
-    document.body.style.overflowY = "hidden";
-    document.body.style.overflowX = "hidden";
+    document.body.style.overflowY = 'hidden';
+    document.body.style.overflowX = 'hidden';
     if (window.innerWidth < window.innerHeight) {
       isMobile(true);
     }

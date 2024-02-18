@@ -1,32 +1,30 @@
 import { useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
 
 let x: number = 0.01;
+
 const realColors = {
   '#F0FFFF': '#f5f6f6',
   '#00CED1': '#caf1f0',
   '#9400D3': '#f168f5',
-  '#FF8C00': '#f7b93e'
-}
+  '#FF8C00': '#f7b93e',
+};
+
 const DodeUI: Function = ({
   colors, clicked, hovered, setHovered, setClicked, router,
 }) => {
   const [color, setColor] = useState('#1B1B1B');
   const [recordedClick, setRecordedClick] = useState(0);
-  const [, setReload] = useState([]);
   const [activated, setActivated] = useState(false);
   const urls = ['/projects', '/contact', '/skills', '/about'];
 
-  const mesh = useRef<THREE.Object3D>();
+  const mesh = useRef<any>();
   useEffect(() => {
     if (x > 3) {
       setTimeout(() => {
-        // console.log(recordedClick)
         router.push(urls[recordedClick]);
         x = 1.0;
-      }, 2700);
-
+      }, 1600);
     }
   }, [x, router, clicked, colors]);
 
@@ -46,9 +44,9 @@ const DodeUI: Function = ({
           mesh.current.scale.set(x, x, x);
           if (x < 4.9) {
             if (x > 3) {
-              x += 0.002;
+              x += 0.006;
             } else {
-              x += 0.04;
+              x += 0.06;
             }
           }
           setTimeout(() => {
@@ -77,7 +75,6 @@ const DodeUI: Function = ({
                 setClicked([...clickList]);
               }, 100);
               setRecordedClick(i);
-              console.log(recordedClick);
             }
           });
         }}
@@ -90,7 +87,7 @@ const DodeUI: Function = ({
             {activated ? (
               <meshBasicMaterial attach="material" color={realColors[color]} toneMapped={false} />
             ) : (
-              <meshPhongMaterial attach="material" color={color}  flatShading shininess={4} toneMapped={false} />
+              <meshPhongMaterial attach="material" color={color} flatShading shininess={4} toneMapped={false} />
             )}
         </mesh>
   );

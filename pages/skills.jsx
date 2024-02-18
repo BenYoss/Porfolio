@@ -1,18 +1,18 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
+/* eslint-disable prefer-arrow-callback */
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import skills from '../components/tech.info.json';
 import Navbar from '../components/Navbar';
-import dynamic from 'next/dynamic';
 
 export default dynamic(() => Promise.resolve(function Skills({ transClick, setTransClick }) {
-  const [, setReload] = useState();
   const [mobile, isMobile] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = "scroll";
-    document.body.style.overflowX = "hidden";
+    document.body.style.overflow = 'scroll';
+    document.body.style.overflowX = 'hidden';
     if (window.innerWidth < window.innerHeight) {
       isMobile(true);
     }
@@ -53,9 +53,9 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             {
               mobile ? (
                 <div>
-                  <div className="nav-bar-about mobile">
+                 <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about mobile">
               <Navbar style="nav-bar-about" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
-            </div>
+            </motion.div>
             <div></div>
     <motion.div transition={{ duration: 1 }} variants={header} initial="hidden" animate="visible" className="skills-header mobile">
       <h1>My Skills</h1>
@@ -365,9 +365,9 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
                 </div>
               ) : (
                 <div>
-                       <div className="nav-bar-about">
+                <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about">
               <Navbar style="nav-bar-about" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
-            </div>
+            </motion.div>
             <div></div>
     <motion.div variants={header} transition={{ duration: 1 }} initial="hidden" animate="visible" className="skills-header">
       <h1>My Skills</h1>

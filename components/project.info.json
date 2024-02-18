@@ -1,38 +1,38 @@
 [
     {
         "title": "Barkpoint",
-        "overview": "Web application that gives users toy suggestions for their dog.",
-        "contrib-1": "Created a no-SQL schema and persistence methods using Mongoose.",
-        "contrib-2": "Implemented a toy filtration algorithm that sorts toys fetched from a serpAPI to fit a keyword criteria.",
+        "overview": "Web application that gives users toy suggestions for their dog",
+        "contrib-1": "Created a no-SQL schema and persistence methods using Mongoose",
+        "contrib-2": "Implemented a toy filtration algorithm that sorts toys fetched from a serpAPI to fit a keyword criteria",
         "contrib-3": "",
         "contrib-4": "",
         "tech-used": "Mongoose, React-Router, Webpack, React, Oauth, Four-Square-API, SerpSearch-API, Google-Maps-API, Material-UI, Google-Cloud-Services"
     },
     {
         "title": "Languine",
-        "overview": "Social messaging app that uses real-time translation in chat rooms.",
-        "contrib-1": "Built a duplex-communication system for user-to-user interactions using socket.io.",
-        "contrib-2": "Incorporated Google Cloud buckets to persist big data images/videos from uploads.",
-        "contrib-3": "Secured private rooms through validation and password/router encryption with CryptoJS.",
-        "contrib-4": "",
+        "overview": "Social messaging app that uses real-time translation in chat rooms",
+        "contrib-1": "Built a duplex-communication system for user-to-user interactions using socket.io",
+        "contrib-2": "Incorporated Google Cloud buckets to persist big data images/videos from uploads",
+        "contrib-3": "Secured private rooms through validation and password/router encryption with CryptoJS",
+        "contrib-4": "Configured chat rooms with 'Host Users' who could mute, ban, and kick users",
         "tech-used": "Mongoose, React-Router, Webpack, React, Oauth, Socket.io, Google-Translate-API, Bootstrap, Google-Cloud-Services"
     },
     {
         "title": "Quasibound",
-        "overview": "Quasibound is a 3D card gaming platform that allows for anyone to upload an image and an AI algorithm will create a card.",
-        "contrib-1": "Constructed a tri-component algorithm containing artificial intelligence to find keywords, record points, add probability boosts, and finish through a point equalizer to produce balanced card stats.",
-        "contrib-2": "Rendered a three dimensional plane for card html elements using a CSS3D environment.",
-        "contrib-3": "Inserted object animations and element tweens using CSS keyframes and CSS3D useFrames.",
+        "overview": "Quasibound is a 3D card gaming platform that allows for anyone to upload an image and an AI algorithm will create a card",
+        "contrib-1": "Constructed a tri-component algorithm containing artificial intelligence to find keywords, record points, add probability boosts, and finish through a point equalizer to produce balanced card stats",
+        "contrib-2": "Rendered a three dimensional plane for card html elements using a CSS3D environment",
+        "contrib-3": "Inserted object animations and element tweens using CSS keyframes and CSS3D useFrames",
         "contrib-4": "",
-        "tech-used": "Postgresql, ThreeJS, Webpack, RTF, React, React-Router, ML5, Socket.io, Oauth, Underscore, AntDesign, Google-Cloud-Services"
+        "tech-used": "PostgreSQL, ThreeJS, Webpack, RTF, React, React-Router, ML5, Socket.io, Oauth, Underscore, AntDesign, Google-Cloud-Services"
     },
     {
-        "title": "Ciphrase",
-        "overview": "Addictive word game that sends daily brain teasers to share and compete with friends.",
-        "contrib-1": "Utilized ",
-        "contrib-2": "Inserted instantaneous search engine with Azure’s Bing search API to add dynamic review routing using React Hooks.",
-        "contrib-3": "Forged advanced schema architecture using Sequelize to manage users/reviews.",
-        "contrib-4": "",
-        "tech-used": "MySQL, React-Router, Webpack, React, Oauth, Microsoft-Azure-Cognitive-Services, Material-UI, Google-Cloud-Services"
+        "title": "Ciphrase - Personal Challenge",
+        "overview": "Addictive word game that sends daily brain teasers and allows users to share and compete with friends",
+        "contrib-1": "Innovated a cost-effective alternative to cloud storage by using blob URL sharing, bringing total storage costs down to $0",
+        "contrib-2": "Developed an automated idiom generator that extracts and transforms unstructured string data into structured JSON",
+        "contrib-3": "Utilized cookie packets to record user activity, allowing for a persistent gameplay experience across n users",
+        "contrib-4": "Optimized a responsive web design using SCSS Mixins, making the game compatible across 95% of platforms",
+        "tech-used": "MongoDB, React-Router, Webpack, React, FramerMotion, SCSS, Heroku, Cookies, Node, Chart.js"
     }
 ]

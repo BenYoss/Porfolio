@@ -11,7 +11,9 @@ type Props = {
     setTransClick: Function,
 }
 
-const Navbar: React.FC<Props> = ({ style, type, transClick, setTransClick }) => {
+const Navbar: React.FC<Props> = ({
+  style, type, transClick, setTransClick,
+}) => {
   const [mobile, isMobile] = React.useState(false);
   React.useEffect(() => {
     if (window.innerWidth < window.innerHeight) {
@@ -19,9 +21,9 @@ const Navbar: React.FC<Props> = ({ style, type, transClick, setTransClick }) => 
     }
   }, [mobile]);
   return (
-        <div className="navbar-container">
+        <motion.div className="navbar-container">
           { mobile ? (
-            <div className="navbar-cluster">
+            <motion.div className="navbar-cluster">
               {/* <a className="arrow left">
               </a> */}
               <Link className={style} href="/">
@@ -39,10 +41,10 @@ const Navbar: React.FC<Props> = ({ style, type, transClick, setTransClick }) => 
                   </motion.span>
                 </motion.div>
               </Link>
-            </div>
+            </motion.div>
           ) : (
-            <div className="navbar-cluster">
-            <Link  className={style} href="/" >
+            <motion.div className="navbar-cluster">
+            <Link className={style} href="/" >
               <motion.div
                animate={{ opacity: 1, scale: 1 }}
                whileHover={{ scale: 1.03, textShadow: '-2px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff' }}
@@ -57,9 +59,9 @@ const Navbar: React.FC<Props> = ({ style, type, transClick, setTransClick }) => 
                 </motion.span>
               </motion.div>
             </Link>
-          </div>
+          </motion.div>
           ) }
-        </div>
+        </motion.div>
   );
 };
 
