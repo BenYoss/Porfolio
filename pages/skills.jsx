@@ -53,7 +53,7 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             {
               mobile ? (
                 <div>
-                 <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about mobile">
+                 <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about mobile">
               <Navbar style="nav-bar-about" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </motion.div>
             <div></div>
@@ -365,7 +365,7 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
                 </div>
               ) : (
                 <div>
-                <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about">
+                <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about">
               <Navbar style="nav-bar-about" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </motion.div>
             <div></div>

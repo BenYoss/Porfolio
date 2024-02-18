@@ -54,7 +54,7 @@ export default function About({ transClick, setTransClick }) {
             </div>
           ) : (
             <div>
-              <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about">
+              <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about">
                 <Navbar style="nav-bar-about" transClick={transClick} setTransClick={setTransClick} />
               </motion.div>
             <div className="about-me-header">

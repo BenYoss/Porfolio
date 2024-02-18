@@ -20,13 +20,13 @@ export default function Contact({ transClick, setTransClick }) {
         <div className="contact-container">
           {mobile ? (
               <div className="contact-container">
-            <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about mobile">
+            <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about mobile">
               <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </motion.div>
           </div>
           ) : (
             <div className="contact-container">
-            <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about">
+            <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about">
               <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </motion.div>
             </div>

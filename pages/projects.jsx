@@ -1,6 +1,8 @@
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable prefer-arrow-callback */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-trailing-spaces */
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
@@ -69,7 +71,7 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
           {mobile ? (
             <div>
               <div className="contact-container">
-              <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about mobile">
+              <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about mobile">
                 <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
               </motion.div>
           </div>
@@ -92,16 +94,20 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
                 <span className="extended-span">{`Overview: ${projectInfo[index].overview}`}</span>
               </div>
               <ul className="extended-desc">
-                {projectInfo[index]['contrib-1'] && 
+                {projectInfo[index]['contrib-1']
+                 && 
                 <li className="extend-span">{projectInfo[index]['contrib-1']}
                 </li>}
-                {projectInfo[index]['contrib-2'] && 
+                {projectInfo[index]['contrib-2']
+                && 
                 <li className="extend-span">{projectInfo[index]['contrib-2']}
                 </li>}
-                {projectInfo[index]['contrib-3'] && 
+                {projectInfo[index]['contrib-3']
+                && 
                 <li className="extend-span">{projectInfo[index]['contrib-3']}
                 </li>}
-                {projectInfo[index]['contrib-4'] && 
+                {projectInfo[index]['contrib-4']
+                && 
                 <li className="extend-span">{projectInfo[index]['contrib-4']}
                 </li>}
               </ul>
@@ -119,7 +125,7 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
           ) : (
             <div>
             <div className="contact-container">
-            <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y:-100 }, visible: { y:1 }}} initial="hidden" animate="visible" className="nav-bar-about">
+            <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about">
                 <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
             </motion.div>
             </div>
