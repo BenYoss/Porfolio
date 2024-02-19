@@ -5,7 +5,9 @@
         "node": true
     },
     "extends": [
-        "airbnb-base"
+        "airbnb-base",
+        "next",
+        "prettier"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -20,5 +22,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+      "react/no-unescaped-entities": "off",
+      "@next/next/no-page-custom-font": "off"
     }
 }
