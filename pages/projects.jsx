@@ -20,13 +20,13 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
     setClicks(clickList);
 
     if (clickList[index]) {
-      document.getElementById(`extended-${index}`).style.width = '55vw';
-      document.getElementById(`extended-${index}`).style.backgroundColor = colors[index];
-      document.getElementById(`extended-${index}`).style.animation = 'extended-tween ease-out 0.5s';
-      document.getElementsByClassName('extended-unit').background = 'blue';
+      // document.getElementById(`extended-${index}`).style.width = '55vw';
+      // document.getElementById(`extended-${index}`).style.backgroundColor = colors[index];
+      // document.getElementById(`extended-${index}`).style.animation = 'extended-tween ease-out 0.5s';
+      // document.getElementsByClassName('extended-unit').background = 'blue';
     } else {
-      document.getElementById(`extended-${index}`).style.width = '0vw';
-      document.getElementById(`extended-${index}`).style.animation = 'extended-tweenr ease-out 0.5s';
+      // document.getElementById(`extended-${index}`).style.width = '0vw';
+      // document.getElementById(`extended-${index}`).style.animation = 'extended-tweenr ease-out 0.5s';
     }
   };
   const onExtendedMobile = (index) => {
@@ -34,15 +34,15 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
     clickList[index] = !clickList[index];
     setClicks(clickList);
 
-    if (clickList[index]) {
-      document.getElementById(`extended-${index}`).style.height = '120vw';
-      document.getElementById(`extended-${index}`).style.backgroundColor = colors[index];
-      document.getElementById(`extended-${index}`).style.animation = 'extended-tween-mobile ease-out 0.5s';
-      document.getElementsByClassName('extended-unit').background = 'blue';
-    } else {
-      document.getElementById(`extended-${index}`).style.height = '0vw';
-      document.getElementById(`extended-${index}`).style.animation = 'extended-tweenr-mobile ease-out 0.5s';
-    }
+    // if (clickList[index]) {
+    //   document.getElementById(`extended-${index}`).style.height = '120vw';
+    //   document.getElementById(`extended-${index}`).style.backgroundColor = colors[index];
+    //   document.getElementById(`extended-${index}`).style.animation = 'extended-tween-mobile ease-out 0.5s';
+    //   document.getElementsByClassName('extended-unit').background = 'blue';
+    // } else {
+    //   document.getElementById(`extended-${index}`).style.height = '0vw';
+    //   document.getElementById(`extended-${index}`).style.animation = 'extended-tweenr-mobile ease-out 0.5s';
+    // }
   };
   useEffect(() => {
     document.body.style.overflowY = 'hidden';

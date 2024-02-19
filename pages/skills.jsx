@@ -6,17 +6,16 @@ import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import skills from '../components/tech.info.json';
 import Navbar from '../components/Navbar';
-
 export default dynamic(() => Promise.resolve(function Skills({ transClick, setTransClick }) {
   const [mobile, isMobile] = useState(false);
-
+  
   useEffect(() => {
     document.body.style.overflow = 'scroll';
     document.body.style.overflowX = 'hidden';
+    document.getElementsByTagName('html')[0].style.background = '#f168f5';
     if (window.innerWidth < window.innerHeight) {
       isMobile(true);
     }
-    document.getElementsByTagName('html')[0].style.background = '#f168f5';
   }, []);
 
   const header = {
@@ -363,7 +362,7 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
     </motion.div>
       </motion.div>
                 </div>
-              ) : (
+              ) : ( 
                 <div>
                 <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about">
               <Navbar style="nav-bar-about" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />

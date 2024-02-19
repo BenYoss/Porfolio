@@ -11,7 +11,7 @@ const realColors = {
 };
 
 const DodeUI: Function = ({
-  colors, clicked, hovered, setHovered, setClicked, router,
+  colors, clicked, hovered, setHovered, setClicked, router, setDodeFinish,
 }) => {
   const [color, setColor] = useState('#1B1B1B');
   const [recordedClick, setRecordedClick] = useState(0);
@@ -20,11 +20,14 @@ const DodeUI: Function = ({
 
   const mesh = useRef<any>();
   useEffect(() => {
+    console.log('hit');
     if (x > 3) {
       setTimeout(() => {
         router.push(urls[recordedClick]);
         x = 1.0;
-      }, 1600);
+        setDodeFinish(true);
+        setColor('#1B1B1B');
+      }, 1000);
     }
   }, [x, router, clicked, colors]);
 
@@ -32,7 +35,7 @@ const DodeUI: Function = ({
     mesh.current.rotation.x = mouse.x * 0.2;
     mesh.current.rotation.z = mouse.y * 0.1;
     mesh.current.rotation.y += 0.003;
-    if (hovered[4]) {
+    if (hovered[4] || activated) {
       colors.forEach((type, i) => {
         if (clicked[i]) {
           setActivated(true);
@@ -44,17 +47,13 @@ const DodeUI: Function = ({
           mesh.current.scale.set(x, x, x);
           if (x < 4.9) {
             if (x > 3) {
-              x += 0.006;
+              x += 0.03;
             } else {
-              x += 0.06;
+              x += 0.008;
             }
           }
-          setTimeout(() => {
-          }, 2000);
         }
       });
-    } else {
-      setColor('#1B1B1B');
     }
     if (x < 1.5) {
       mesh.current.scale.set(x, x, x);
