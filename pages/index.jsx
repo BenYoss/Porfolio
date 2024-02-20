@@ -23,7 +23,7 @@ const Index = () => {
     if (!document.getElementsByTagName('html')[0].style.background.includes('gradient')) {
       document.getElementsByTagName('html')[0].style.background = `radial-gradient(${document.getElementsByTagName('html')[0].style.background} 4%, #000000 96%)`;
     }
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     if (mobile) {
@@ -58,7 +58,7 @@ const Index = () => {
               </div>);
       }, 1400);
     }
-  }, [dodeHover, mobile]);
+  }, [dodeHover, mobile, setThreeEnv, setDodeHover, router, clicked, setClicked]);
 
   return (
     <motion.div className="splash-container" variants={pageVariants} initial="initial"

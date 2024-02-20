@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { WebGLShadowMap } from 'three';;
 import { useFrame } from '@react-three/fiber';
 
 let rendered = false;

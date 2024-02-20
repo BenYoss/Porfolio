@@ -71,13 +71,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -109,13 +109,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -146,13 +146,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -183,13 +183,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -220,13 +220,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -257,13 +257,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -294,13 +294,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -331,13 +331,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -380,13 +380,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -418,13 +418,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -455,13 +455,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -492,13 +492,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -529,13 +529,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -566,13 +566,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -603,13 +603,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };
@@ -640,13 +640,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
             const item = {
               hidden: {
                 opacity: 0,
-                transition: { duration: 100 },
+                transition: { duration: 1 },
                 height: 0,
               },
               visible: {
                 opacity: 1,
                 height: 215,
-                transition: { duration: i / 100 },
+                transition: { duration: 0 },
                 scale: 0.8,
               },
             };

@@ -22,12 +22,12 @@ const DodeUI: Function = ({
   useEffect(() => {
     console.log('hit');
     if (x > 3) {
-      setTimeout(() => {
+      // setTimeout(() => {
         router.push(urls[recordedClick]);
         x = 1.0;
         setDodeFinish(true);
         setColor('#1B1B1B');
-      }, 1000);
+      // }, 100);
     }
   }, [x, router, clicked, colors]);
 
@@ -72,7 +72,7 @@ const DodeUI: Function = ({
               clickList[i] = false;
               setTimeout(() => {
                 setClicked([...clickList]);
-              }, 100);
+              }, 50);
               setRecordedClick(i);
             }
           });

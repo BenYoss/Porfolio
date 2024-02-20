@@ -38,14 +38,15 @@ const Splash3D = ({ router, dodeHover, setDodeHover }) => {
     // if (color.includes(document.getElementsByTagName('canvas')[0].style.backgroundColor)) {
     //   document.getElementsByTagName('canvas')[0].style.backgroundColor = 'none';
     // }
-  }, [hovered, dodeHover, setDodeHover]);
+  }, [hovered, dodeHover, setDodeHover, setDodeFinish]);
 
   return (
-    !dodeFinish ? (
+    dodeFinish ? (
+      <canvas style={{width: '100vw', height: '100vh', backgroundColor: !dodeFinish ? 'none' : realColors[canvasBackgroundColor]}}></canvas>
+    ) : (
     <Canvas>
         <>
-          <React.Suspense fallback={
-              <mesh>
+          <React.Suspense fallback={<mesh>
               <sphereBufferGeometry attach="geometry" args={[0.7, 30, 30]} />
               <meshBasicMaterial attach="material" color={0xfff1ef} />
           </mesh>}>
@@ -92,8 +93,6 @@ const Splash3D = ({ router, dodeHover, setDodeHover }) => {
           index={3} />
         </>
         </Canvas>
-    ) : (
-      <canvas style={{width: '100vw', height: '100vh', backgroundColor: !dodeFinish ? 'none' : realColors[canvasBackgroundColor]}}></canvas>
     )
   );
 };
