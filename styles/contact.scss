@@ -2,6 +2,10 @@ $color-bg: #5191b3;
 .contact-form {
     margin-left: 25vw;
     margin-right: 25vw;
+    &.mobile {
+      margin-left: 5vw;
+      margin-right: 5vw;
+    }
     position: absolute;
     background-color: white;
     width: 50vw;
@@ -20,6 +24,9 @@ $color-bg: #5191b3;
     color: black;
     cursor:pointer;
     text-decoration: none;
+    &.mobile {
+      text-align: center;
+    }
 }
 
 .contact-header {
@@ -42,7 +49,7 @@ $color-bg: #5191b3;
   
   body {
     // background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
-    font-size: 12px;
+    font-size: 1vh;
   }
   
   body, button, input, textarea {
@@ -62,6 +69,10 @@ $color-bg: #5191b3;
     padding: 10px;
     margin-left: 15vw;
     margin-right: 15vw;
+    &.mobile {
+      margin-left: 5vw;
+      margin-right: 15vw;
+    }
   }
   
   .screen {
@@ -171,7 +182,7 @@ $color-bg: #5191b3;
     color: $color-bg;
     outline: none;
     transition: border-color .2s;
-    font-size: 0.9vw;
+    font-size: 1vh;
 
     &textarea {
       height: 100px;

@@ -22,6 +22,7 @@ $test: 3;
   font-size: xx-large;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 // Header meant to display the header for the skills page.
@@ -105,6 +106,9 @@ $test: 3;
     // overflow: hidden;
     font-family: sans-serif;
     list-style-type: none;
+    &.mobile {
+      margin: 0 0;
+    }
   }
   
   .hex {

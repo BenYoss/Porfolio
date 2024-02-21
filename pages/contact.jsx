@@ -17,11 +17,11 @@ export default function Contact({ transClick, setTransClick }) {
     }
   }, []);
   return (
-        <div className="contact-container">
+        <div className={mobile ? "" : "contact-container"}>
           {mobile ? (
-              <div className="contact-container">
+              <div className="contact-container mobile">
             <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about mobile">
-              <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+              <Navbar style="navbar-contact" type="navbar-contact mobile" transClick={transClick} setTransClick={setTransClick} />
             </motion.div>
           </div>
           ) : (

@@ -7,8 +7,12 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 
 function changeBackground() {
-  document.body.style.overflowY = 'hidden';
-  document.body.style.overflowX = 'hidden';
+  if (window.innerWidth < 800) {
+    document.body.style.overflowY = 'scroll';
+    document.body.style.overflowX = 'hidden';
+  }
+else {  document.body.style.overflowY = 'hidden';
+  document.body.style.overflowX = 'hidden';}
   document.getElementsByTagName('html')[0].style.background = '#f7b93e';
 }
 
@@ -23,13 +27,13 @@ export default function About({ transClick, setTransClick }) {
   }, []);
 
   return (
-      <div className="about-container">
+      <div className="about-container mobile">
         {
           mobile ? (
             <div>
-              <div className="nav-bar-about mobile">
-                <Navbar transClick={transClick} setTransClick={setTransClick} />
-              </div>
+              <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about mobile">
+                <Navbar style="navbar-contact" type="nav-bar-about mobile" transClick={transClick} setTransClick={setTransClick} />
+              </motion.div>
               <div className="about-me-header mobile">
                 <h2>Hey! I'm Ben!</h2>
               </div>

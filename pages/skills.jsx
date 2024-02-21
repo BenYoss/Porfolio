@@ -43,7 +43,8 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
       // y: distance * 6,
     },
     scale: {
-      scale: 0.8,
+      scale: window.innerWidth < 800 ? 1 : 0.8,
+      y: window.innerWidth < 800 ? 100 : 0,
     },
   };
 
@@ -53,14 +54,13 @@ export default dynamic(() => Promise.resolve(function Skills({ transClick, setTr
               mobile ? (
                 <div>
                  <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about mobile">
-              <Navbar style="nav-bar-about" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+              <Navbar style="navbar-contact" type="navbar-contact mobile" transClick={transClick} setTransClick={setTransClick} />
             </motion.div>
             <div></div>
     <motion.div transition={{ duration: 1 }} variants={header} initial="hidden" animate="visible" className="skills-header mobile">
       <h1>My Skills</h1>
     </motion.div>
     <section id="section03" class="demo">
-      <a><span></span>Scroll</a>
     </section>
     <motion.div variants={header} className="grid" animate="scale">
     <motion.div variants={header} initial="hidden" animate="language" className="skills-header lang">

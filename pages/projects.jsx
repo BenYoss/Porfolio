@@ -45,8 +45,12 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
     }
   };
   useEffect(() => {
-    document.body.style.overflowY = 'hidden';
-    document.body.style.overflowX = 'hidden';
+    if (window.innerWidth < 800) {
+      document.body.style.overflowY = 'scroll';
+      document.body.style.overflowX = 'hidden';
+    }
+  else {  document.body.style.overflowY = 'hidden';
+    document.body.style.overflowX = 'hidden';}
     document.getElementsByTagName('html')[0].style.background = '#f5f6f6';
     if (window.innerWidth < window.innerHeight) {
       isMobile(true);
@@ -72,7 +76,7 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
             <div>
               <div className="contact-container">
               <motion.div transition={{ duration: 0.5 }} variants={{ hidden: { y: -100 }, visible: { y: 1 } }} initial="hidden" animate="visible" className="nav-bar-about mobile">
-                <Navbar style="navbar-contact" type="navbar-contact" transClick={transClick} setTransClick={setTransClick} />
+                <Navbar style="navbar-contact" type="navbar-contact mobile" transClick={transClick} setTransClick={setTransClick} />
               </motion.div>
           </div>
           <motion.div variants={header} transition={{ duration: 1 }} initial="hidden" animate="visible" className="experience-header mobile">
@@ -89,27 +93,27 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
               () => { onExtendedMobile(index); }
             } />
             <div id={`extended-${index}`} className={`extended mobile test-${index}`} key={index}>
-              <h2 className="extended-desc mobile">{projectInfo[index].title}</h2>
-              <div className="extended-desc mobile">
-                <span className="extended-span">{`Overview: ${projectInfo[index].overview}`}</span>
-              </div>
-              <ul className="extended-desc">
+              <ul><h2 className="extended-desc mobile">{projectInfo[index].title}</h2></ul>
+              <ul className="extended-desc mobile">
+                <span className="extended-span mobile">{`Overview: ${projectInfo[index].overview}`}</span>
+              </ul>
+              <ul className="extended-desc mobile">
                 {projectInfo[index]['contrib-1']
                  && 
-                <li className="extend-span">{projectInfo[index]['contrib-1']}
-                </li>}
+                <p className="extend-span">{projectInfo[index]['contrib-1']}
+                </p>}
                 {projectInfo[index]['contrib-2']
                 && 
-                <li className="extend-span">{projectInfo[index]['contrib-2']}
-                </li>}
+                <p className="extend-span">{projectInfo[index]['contrib-2']}
+                </p>}
                 {projectInfo[index]['contrib-3']
                 && 
-                <li className="extend-span">{projectInfo[index]['contrib-3']}
-                </li>}
+                <p className="extend-span">{projectInfo[index]['contrib-3']}
+                </p>}
                 {projectInfo[index]['contrib-4']
                 && 
-                <li className="extend-span">{projectInfo[index]['contrib-4']}
-                </li>}
+                <p className="extend-span">{projectInfo[index]['contrib-4']}
+                </p>}
               </ul>
               <div className="extended-tech mobile">
                 {tech.map((technology, i) => (
