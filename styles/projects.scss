@@ -184,9 +184,13 @@ $container-background: white;
   .extended-desc {
     margin: 5%;
     max-width: 60%;
+    font-size: 0.8vw;
     &.mobile {
       font-size: 1.4vh;
       max-width: 80%;
+    }
+    &.title {
+      font-size: 1.5vw;
     }
   }
 

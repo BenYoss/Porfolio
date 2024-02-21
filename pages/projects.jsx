@@ -147,7 +147,7 @@ export default dynamic(() => Promise.resolve(function Contact({ transClick, setT
               () => { onExtended(index); }
             } />
             <div id={`extended-${index}`} className="extended" key={index}>
-              <h2 className="extended-desc">{projectInfo[index].title}</h2>
+              <h2 className="extended-desc title">{projectInfo[index].title}</h2>
               <div className="extended-desc">
                 <span className="extended-span">{`Overview: ${projectInfo[index].overview}`}</span>
               </div>
